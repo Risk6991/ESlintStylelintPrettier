@@ -1,7 +1,11 @@
 module.exports = {
   syntax: ["scss"],
   plugins: ["stylelint-scss"], // stylelint-scss を使う
-  extends: ["stylelint-config-standard", "stylelint-config-recess-order"],
+  extends: [
+    "./node_modules/prettier-stylelint/config.js",
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
   rules: {
     "string-quotes": "double", // ダブルクォーテーションに揃える
     "at-rule-no-unknown": null,
