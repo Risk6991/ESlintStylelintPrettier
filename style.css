@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* scssファイルを設計毎に分割しています。 */
+/* 命名規則、設計はRSCSSに基づき作成しています。
+hoge-hoge のようにハイフンで繋がれたものはコンポーネントを指しています。
+クラスの後ろに追加で付与されたものは、コンポーネント配置用のクラスです。一つ上の階層scssファイルを参照してください。
+-hoge のように先頭にハイフンがついているものは共通設計のものに追加で状態を与えられています。そのため同じscssファイルを参照してください。
+*/
+.title-area {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 50px;
+  /* 高さはpx推奨 vhも可 */ }
+
+.title-block {
+  width: 55%;
+  /* ボックスの横幅を指定する */ }
+  .title-block > .makerName {
+    font-size: 20px;
+    /* フォントのサイズを指定する */
+    line-height: 1;
+    /* 行の高さを指定する 数値のみの入力推奨 */ }
+  .title-block > .carName {
+    font-size: 14px;
+    /* フォントのサイズを指定する */
+    line-height: 1;
+    /* 行の高さを指定する 数値のみの入力推奨 */ }
+
+.icon-area {
+  width: 30%;
+  /* ボックスの横幅を指定する */ }
+  .icon-area > .icon {
+    line-height: 1;
+    /* 行の高さを指定する 数値のみの入力推奨 */ }
+  .icon-area > .description {
+    font-size: 14px;
+    /* フォントのサイズを指定する */
+    line-height: 1;
+    /* 行の高さを指定する 数値のみの入力推奨 */ }
+
+.subTitle-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 50px; }
+
+.icon-block {
+  width: 9%;
+  /* ボックスの横幅を指定する */ }
+  .icon-block > .icon {
+    line-height: 1;
+    /* 行の高さを指定する 数値のみの入力推奨 */ }
+
+.location-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  /* 高さはpx推奨 vhも可 */ }
+  .location-block > .landMark {
+    width: 45%;
+    font-size: 14px;
+    /* フォントのサイズを指定する */
+    line-height: 1; }
+  .location-block > .prefecture {
+    width: 23%;
+    font-size: calc( 0.5625rem + ((1vw - 3.75px) * 0.1942));
+    /* フォントのサイズを指定する */
+    line-height: 1; }
+  .location-block > .city {
+    width: 31%;
+    font-size: 9px;
+    /* フォントのサイズを指定する */
+    line-height: 1; }
+
+.timeTable-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  /* 高さはpx推奨 vhも可 */ }
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  height: 35px;
+  /* 高さはpx推奨 vhも可 */ }
+  .price-list > .time {
+    width: 100%;
+    font-size: 12px;
+    /* フォントのサイズを指定する */
+    line-height: 1;
+    text-align: center; }
+  .price-list > .yen {
+    width: 20%;
+    font-size: 14px;
+    /* フォントのサイズを指定する */
+    line-height: 1; }
+  .price-list > .price {
+    width: 70%;
+    font-size: 14px;
+    /* フォントのサイズを指定する */
+    line-height: 1; }

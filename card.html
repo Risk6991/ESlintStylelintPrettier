@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="row grey lighten-2">
+        <div class="container white-text">
+            <div class="section center">
+                <h5>車好きのための</h5>
+                <h5>プレミアム</h5>
+                <h5>カーシェアリングサービス！</h5>
+            </div>
+            <div class="logo-area center section">
+                <a href="#" class="brand-logo">
+                    <img class="responsive-img" src="~/images/aracan_white_logo.png" />
+                </a>
+            </div>
+            <form class="form-inline center section js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+                <button class="btn-large waves-effect waves-light" type="submit">車を探す
+                    <span class="icon-area">
+                        <i class="material-icons left">directions_car</i>
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <image class="responsive-img" src="car.jpg" />
+                        </div>
+                        <div class="card-content">
+                            <div class="title-area">
+                                <div class="title-block">
+                                    <p class="makerName">LAMBORGHINI</p>
+                                    <p class="carName">AVENTADOLE S /2019</p>
+                                </div>
+                                <div class="icon-area center">
+                                    <div class="icon">
+                                        <i class="material-icons teal-text text-lighten-1">directions_car</i>
+                                    </div>
+                                    <div class="description teal-text text-lighten-1">詳細情報</div>
+                                </div>
+                            </div>
+                            <div class="subTitle-area">
+                                <div class="icon-block center">
+                                    <div class="icon">
+                                        <i class="material-icons teal-text text-lighten-1">pin_drop</i>
+                                    </div>
+                                </div>
+                                <div class="location-block">
+                                    <p class="landMark">大須観音</p>
+                                    <p class="prefecture">愛知県</p>
+                                    <p class="city">名古屋市</p>
+                                </div>
+                                <div class="timeTable-block">
+                                    <div class="price-list">
+                                        <p class="time">12時間</p>
+                                        <span class="yen">¥</span>
+                                        <p class="price">18000</p>
+                                    </div>
+                                    <div class="price-list">
+                                        <p class="time">24時間</p>
+                                        <span class="yen">¥</span>
+                                        <p class="price">10000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 l6">
+                    <div class="card">
+                        <div class="card-image">
+                            <image height="200px" width="300px" src="car.jpg" />
+                        </div>
+                        <span></span>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s8 l8">
+                                    <p class="card-title"></p>
+                                </div>
+                                <div class="col s4 l4 center">
+                                    <span class="icon-area">
+                                        <i class="material-icons teal-text text-lighten-1">directions_car</i>
+                                    </span>
+                                </div>
+                                <div class="col s8 l8">
+                                    <p></p>
+                                </div>
+                                <div class="col s4 l4 center">
+                                    <p><a asp-controller="CarDetails" asp-action="Index" asp-route-id="@item.CarId">詳細情報</a></p>
+                                </div>
+                                <div class="col s2">
+                                    <span class="icon-area"><i class="material-icons">pin_drop</i></span>
+                                </div>
+                                <div class="col s5 l5">
+                                    <strong></strong>
+                                    <span></span>
+                                </div>
+                                <div class="col s2">
+                                    <p>12時間</p>
+                                    <p></p>
+                                </div>
+                                <div class="col s3">
+                                    <p>24時間</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

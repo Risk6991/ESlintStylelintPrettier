@@ -1,0 +1,26 @@
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  //width: 70px;
+  height: 35px; /* 高さはpx推奨 vhも可 */
+  > .time {
+    width: 100%;
+    font-size: 12px; /* フォントのサイズを指定する */
+    line-height: 1;
+    text-align: center;
+  }
+
+  > .yen {
+    width: 20%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+
+  > .price {
+    width: 70%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+}

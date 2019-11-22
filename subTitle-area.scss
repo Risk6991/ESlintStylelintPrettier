@@ -1,0 +1,76 @@
+.subTitle-area {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.icon-block {
+  //width: 10%; /* ボックスの横幅を指定する */
+  > .icon {
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+    //vertical-align: baseline;
+  }
+}
+
+.location-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  width: 45%;
+  height: 70px; /* 高さはpx推奨 vhも可 */
+  > .landMark {
+    width: 25%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+
+  > .prefecture {
+    width: 15%;
+    font-size: 12px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+
+  .timeTable-block {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 45%;
+    height: 50px; /* 高さはpx推奨 vhも可 */
+  }
+
+  > .city {
+    width: 18%;
+    font-size: 12px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+}
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  //width: 70px;
+  height: 35px; /* 高さはpx推奨 vhも可 */
+  > .time {
+    width: 100%;
+    font-size: 12px; /* フォントのサイズを指定する */
+    line-height: 1;
+    text-align: center;
+  }
+
+  > .yen {
+    width: 20%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+
+  > .price {
+    width: 70%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+}
