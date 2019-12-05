@@ -1,0 +1,134 @@
+$font-index: W3 14px/28px Hiragino Sans;
+$font-main: W3 14px/24px Hiragino Sans;
+$font-small: W3 12px/18px Hiragino Sans;
+$font-mark: W6 14px/14px Hiragino Sans;
+$font-price: Regular 24px/29px Abel;
+$font-yen: Regular 24px/29px Abel;
+$font-address: Medium 12px/18px YuGothic;
+
+/* 汎用レスポンシブフォントサイズ調整 指定した画面サイズ(480px~1920px)に応じてレスポンシブで設定したsize(9~12px)で可変する
+*   responsive-font-calculator
+*   https://websemantics.uk/tools/responsive-font-calculator/
+*/
+$responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
+
+//マテリアルアイコンの大きさを調整するための仮置き
+.icon-size > i {
+  font-size: 3rem;
+}
+
+//textの表示位置制御用クラス
+.u-text-alignL {
+  text-align: left;
+}
+
+.u-text-alignC {
+  text-align: center;
+}
+
+.fontTitle {
+  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+  color: $color-text;
+  letter-spacing: 0.72px;
+  opacity: 1;
+}
+
+.fontSubTitle {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: #b4b4b4;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontIndex {
+  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+  color: $color-text;
+  letter-spacing: 0.72px;
+  opacity: 1;
+}
+
+.fontIndex2 {
+  font: W6 14px/19px Hiragino Kaku Gothic Pro;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontList {
+  font: W3 14px/28px Hiragino Kaku Gothic Pro;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.paragraph {
+  font: $font-main;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.paragraph-small {
+  font: $font-small;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.font-btn {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: $color-text;
+  letter-spacing: 0.56px;
+  opacity: 1;
+}
+
+.font-btn2 {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: $color-white;
+  letter-spacing: 0.56px;
+  opacity: 1;
+}
+
+.fontLink {
+  font: $font-mark;
+  color: $color-main;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontLocation {
+  font: $font-mark;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontTime {
+  font: W3 12px/18px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontPrice {
+  font: $font-price;
+  color: $color-text;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.fontYen {
+  font: $font-yen;
+  letter-spacing: 0;
+}
+
+.fontAddress {
+  font: $font-address;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: $color-text2;
+  letter-spacing: 0;
+  opacity: 1;
+}

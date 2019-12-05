@@ -8,7 +8,8 @@
     "eslint": "eslint -c .eslintrc.js --color './src/**/*.{js,jsx}'",
     "eslint:fix": "eslint -c .eslintrc.js --color './src/**/*.{js,jsx}' --fix",
     "stylelint": "stylelint --config .stylelintrc.js './src/**/*.scss'",
-    "stylelint:fix": "stylelint --config .stylelintrc.js './src/**/*.scss' --fix"
+    "stylelint:fix": "stylelint --config .stylelintrc.js './src/**/*.scss' --fix",
+    "css":"node-sass src/scss/style.scss style.css"
   },
   "keywords": [],
   "author": "",

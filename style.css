@@ -1,112 +1,342 @@
 @charset "UTF-8";
-/* scssファイルを設計毎に分割しています。 */
-/* 命名規則、設計はRSCSSに基づき作成しています。
-hoge-hoge のようにハイフンで繋がれたものはコンポーネントを指しています。
-クラスの後ろに追加で付与されたものは、コンポーネント配置用のクラスです。一つ上の階層scssファイルを参照してください。
--hoge のように先頭にハイフンがついているものは共通設計のものに追加で状態を与えられています。そのため同じscssファイルを参照してください。
+/**
+*   Design
+* =================================================================== */
+/* ***********************************
+ *
+ *    Ire's CSS Reset & Base
+ *
+ * *********************************** */
+/* Reset margin, padding, border
+ * *********************************** */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+em,
+small,
+strong,
+sub,
+sup,
+mark,
+del,
+ins,
+strike,
+abbr,
+dfn,
+blockquote,
+q,
+cite,
+code,
+pre,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+div,
+section,
+article,
+main,
+aside,
+nav,
+header,
+hgroup,
+footer,
+img,
+figure,
+figcaption,
+address,
+time,
+audio,
+video,
+canvas,
+iframe,
+details,
+summary,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+/* Typography
+ * *********************************** */
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Sans', 'Osaka', 'メイリオ', 'verdana', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #333; }
+
+* {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+a,
+a:visited {
+  color: inherit; }
+
+/* Layout
+ * *********************************** */
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block; }
+
+* {
+  box-sizing: border-box; }
+
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/* Elements
+ * *********************************** */
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+ol,
+ul {
+  list-style: none; }
+
+img,
+video {
+  max-width: 100%; }
+
+img {
+  border-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+  content: '';
+  content: none; }
+
+/* Attributes & states
+ * *********************************** */
+[hidden] {
+  display: none !important; }
+
+[disabled] {
+  cursor: not-allowed; }
+
+:focus:not(:focus-visible) {
+  outline: none; }
+
+/* Utility classes
+ * *********************************** */
+.sr-only {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  clip: rect(1px, 1px, 1px, 1px); }
+
+/*
+_layout.cshtml(共通レイアウト)のflex対応のために記述。
+all-wrap , header , footer ,main-areaの割合で制御しています。
 */
-.title-area {
+.all-wrap {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  height: 50px;
-  /* 高さはpx推奨 vhも可 */ }
+  flex-direction: column;
+  height: 100vh; }
 
-.title-block {
-  width: 55%;
-  /* ボックスの横幅を指定する */ }
-  .title-block > .makerName {
-    font-size: 20px;
-    /* フォントのサイズを指定する */
-    line-height: 1;
-    /* 行の高さを指定する 数値のみの入力推奨 */ }
-  .title-block > .carName {
-    font-size: 14px;
-    /* フォントのサイズを指定する */
-    line-height: 1;
-    /* 行の高さを指定する 数値のみの入力推奨 */ }
+header,
+footer {
+  flex: 0 0 auto; }
 
-.icon-area {
-  width: 30%;
-  /* ボックスの横幅を指定する */ }
-  .icon-area > .icon {
-    line-height: 1;
-    /* 行の高さを指定する 数値のみの入力推奨 */ }
-  .icon-area > .description {
-    font-size: 14px;
-    /* フォントのサイズを指定する */
-    line-height: 1;
-    /* 行の高さを指定する 数値のみの入力推奨 */ }
+.main-area {
+  flex: 1 0 auto; }
 
-.subTitle-area {
+.l-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.l-grid-col {
+  display: flex;
+  flex-direction: column; }
+
+.l-grid-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  height: 50px; }
+  justify-content: space-around; }
 
-.icon-block {
-  width: 9%;
-  /* ボックスの横幅を指定する */ }
-  .icon-block > .icon {
-    line-height: 1;
-    /* 行の高さを指定する 数値のみの入力推奨 */ }
-
-.location-block {
+.l-grid-center {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 70px;
-  /* 高さはpx推奨 vhも可 */ }
-  .location-block > .landMark {
-    width: 45%;
-    font-size: 14px;
-    /* フォントのサイズを指定する */
-    line-height: 1; }
-  .location-block > .prefecture {
-    width: 23%;
-    font-size: calc( 0.5625rem + ((1vw - 3.75px) * 0.1942));
-    /* フォントのサイズを指定する */
-    line-height: 1; }
-  .location-block > .city {
-    width: 31%;
-    font-size: 9px;
-    /* フォントのサイズを指定する */
-    line-height: 1; }
+  align-items: center; }
 
-.timeTable-block {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50px;
-  /* 高さはpx推奨 vhも可 */ }
+/* 汎用レスポンシブフォントサイズ調整 指定した画面サイズ(480px~1920px)に応じてレスポンシブで設定したsize(9~12px)で可変する
+*   responsive-font-calculator
+*   https://websemantics.uk/tools/responsive-font-calculator/
+*/
+.icon-size > i {
+  font-size: 3rem; }
 
-.price-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: center;
-  height: 35px;
-  /* 高さはpx推奨 vhも可 */ }
-  .price-list > .time {
-    width: 100%;
-    font-size: 12px;
-    /* フォントのサイズを指定する */
-    line-height: 1;
-    text-align: center; }
-  .price-list > .yen {
-    width: 20%;
-    font-size: 14px;
-    /* フォントのサイズを指定する */
-    line-height: 1; }
-  .price-list > .price {
-    width: 70%;
-    font-size: 14px;
-    /* フォントのサイズを指定する */
-    line-height: 1; }
+.u-text-alignL {
+  text-align: left; }
+
+.u-text-alignC {
+  text-align: center; }
+
+.fontTitle {
+  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0.72px;
+  opacity: 1; }
+
+.fontSubTitle {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: #b4b4b4;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontIndex {
+  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0.72px;
+  opacity: 1; }
+
+.fontIndex2 {
+  font: W6 14px/19px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontList {
+  font: W3 14px/28px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.paragraph {
+  font: W3 14px/24px Hiragino Sans;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.paragraph-small {
+  font: W3 12px/18px Hiragino Sans;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.font-btn {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0.56px;
+  opacity: 1; }
+
+.font-btn2 {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  color: #fff;
+  letter-spacing: 0.56px;
+  opacity: 1; }
+
+.fontLink {
+  font: W6 14px/14px Hiragino Sans;
+  color: #30bfa7;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontLocation {
+  font: W6 14px/14px Hiragino Sans;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontTime {
+  font: W3 12px/18px Hiragino Kaku Gothic Pro;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontPrice {
+  font: Regular 24px/29px Abel;
+  color: #333;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.fontYen {
+  font: Regular 24px/29px Abel;
+  letter-spacing: 0; }
+
+.fontAddress {
+  font: Medium 12px/18px YuGothic;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  color: #b4b4b4;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.c-btn {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #30bfa7;
+  border-radius: 3px;
+  opacity: 1; }
+
+.c-btn--half {
+  width: 144px;
+  height: 40px;
+  border: 1px solid #30bfa7;
+  border-radius: 3px;
+  opacity: 1; }
+
+.c-btn--icon {
+  width: 160px;
+  background: #fff 0% 0% no-repeat padding-box;
+  height: 40px;
+  border: 1px solid #30bfa7;
+  border-radius: 3px;
+  opacity: 1; }
+
+.-mainColor {
+  background: #30bfa7 0% 0% no-repeat padding-box; }
+
+.-white {
+  background: #fff 0% 0% no-repeat padding-box; }
+
+.c-card {
+  width: 335px;
+  height: 408px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
+
+/* =================================================================== */

@@ -1,0 +1,33 @@
+@mixin btn {
+  height: 40px;
+  border: 1px solid $color-main;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.c-btn {
+  width: 300px;
+
+  @include btn;
+}
+
+.c-btn--half {
+  width: 144px;
+
+  @include btn;
+}
+
+.c-btn--icon {
+  width: 160px;
+  background: $color-white 0% 0% no-repeat padding-box;
+
+  @include btn;
+}
+
+.-mainColor {
+  background: $color-main 0% 0% no-repeat padding-box;
+}
+
+.-white {
+  background: $color-white 0% 0% no-repeat padding-box;
+}
