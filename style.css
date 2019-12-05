@@ -163,10 +163,11 @@ q::before {
   left: -9999px;
   clip: rect(1px, 1px, 1px, 1px); }
 
-/*
-_layout.cshtml(共通レイアウト)のflex対応のために記述。
-all-wrap , header , footer ,main-areaの割合で制御しています。
-*/
+/**
+*   Layout
+*   パーツの配置や、ラッパーとしての幅や高さなどを決定するクラス
+*   接頭辞としてl-をつける
+**/
 .all-wrap {
   display: flex;
   flex-direction: column;
@@ -179,26 +180,77 @@ footer {
 .main-area {
   flex: 1 0 auto; }
 
-.l-wrap {
+.l-flex-col {
+  display: flex;
+  flex-direction: column; }
+
+.l-flex-row {
+  display: flex;
+  flex-direction: row; }
+
+.l-flex-center {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.l-grid-col {
+.l-flex-start {
   display: flex;
-  flex-direction: column; }
+  align-items: flex-start;
+  justify-content: flex-start; }
 
-.l-grid-row {
+.l-flex-inline {
+  display: inline-flex;
+  align-items: baseline; }
+
+.l-flex-around {
   display: flex;
-  flex-direction: row;
   justify-content: space-around; }
 
-.l-grid-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+.l-margin-auto {
+  margin: 0 auto; }
 
+/**
+*   Utility
+*   調整用のクラス
+*   margin、paddingを付与するのに使用
+*   他種類のパーツ間の空き調整や、パーツとして認められないような、自由な振る舞いをする要素に対してはこちらのクラスを使用
+*   接頭辞としてu-をつける
+**/
+.u-margin-right10 {
+  margin-right: 10px; }
+
+.u-margin-right20 {
+  margin-right: 20px; }
+
+.u-margin-left10 {
+  margin-left: 10px; }
+
+.u-margin-left20 {
+  margin-left: 20px; }
+
+.u-margin-right45 {
+  margin-right: 45px; }
+
+.u-margin-left45 {
+  margin-left: 45px; }
+
+.u-padding-top10 {
+  padding-top: 10px; }
+
+.u-padding-top20 {
+  padding-top: 20px; }
+
+.u-padding-bottom10 {
+  padding-bottom: 10px; }
+
+.u-padding-bottom20 {
+  padding-bottom: 20px; }
+
+/**
+*   Font
+*   フォントの種類やサイズを管理・決定するクラス
+*   接頭辞としてf-をつける
+**/
 /* 汎用レスポンシブフォントサイズ調整 指定した画面サイズ(480px~1920px)に応じてレスポンシブで設定したsize(9~12px)で可変する
 *   responsive-font-calculator
 *   https://websemantics.uk/tools/responsive-font-calculator/
@@ -206,96 +258,103 @@ footer {
 .icon-size > i {
   font-size: 3rem; }
 
-.u-text-alignL {
+.f-text-align-left {
   text-align: left; }
 
-.u-text-alignC {
+.f-text-align-center {
   text-align: center; }
 
-.fontTitle {
-  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+.f-fontTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
   color: #333;
   letter-spacing: 0.72px;
   opacity: 1; }
 
-.fontSubTitle {
+.f-fontSubTitle {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: #b4b4b4;
   text-transform: uppercase;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontIndex {
+.f-fontIndex {
   font: W6 18px/24px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0.72px;
   opacity: 1; }
 
-.fontIndex2 {
+.f-fontIndex2 {
   font: W6 14px/19px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontList {
+.f-fontList {
   font: W3 14px/28px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.paragraph {
+.f-paragraph {
   font: W3 14px/24px Hiragino Sans;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.paragraph-small {
-  font: W3 12px/18px Hiragino Sans;
+.f-paragraph-small {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.font-btn {
+.f-font-btn {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0.56px;
   opacity: 1; }
 
-.font-btn2 {
+.f-font-btn2 {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: #fff;
   letter-spacing: 0.56px;
   opacity: 1; }
 
-.fontLink {
+.f-fontLink {
   font: W6 14px/14px Hiragino Sans;
   color: #30bfa7;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontLocation {
+.f-fontLocation {
   font: W6 14px/14px Hiragino Sans;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontTime {
+.f-fontTime {
   font: W3 12px/18px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontPrice {
-  font: Regular 24px/29px Abel;
+.f-fontPrice {
+  font-family: 'Abel';
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.2;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
 
-.fontYen {
+.f-fontYen {
   font: Regular 24px/29px Abel;
   letter-spacing: 0; }
 
-.fontAddress {
+.f-fontAddress {
   font: Medium 12px/18px YuGothic;
   font-size: 12px;
   font-weight: normal;
@@ -338,5 +397,14 @@ footer {
   background: #fff 0% 0% no-repeat padding-box;
   border-radius: 3px;
   opacity: 1; }
+
+.c-card--shadow {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+
+.c-card__12hoursPrice {
+  height: 37px; }
+
+.c-card__24hoursPrice {
+  height: 37px; }
 
 /* =================================================================== */

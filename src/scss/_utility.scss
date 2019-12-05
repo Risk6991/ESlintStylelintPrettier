@@ -1,0 +1,46 @@
+/**
+*   Utility
+*   調整用のクラス
+*   margin、paddingを付与するのに使用
+*   他種類のパーツ間の空き調整や、パーツとして認められないような、自由な振る舞いをする要素に対してはこちらのクラスを使用
+*   接頭辞としてu-をつける
+**/
+.u-margin-right10 {
+  margin-right: 10px;
+}
+
+.u-margin-right20 {
+  margin-right: 20px;
+}
+
+.u-margin-left10 {
+  margin-left: 10px;
+}
+
+.u-margin-left20 {
+  margin-left: 20px;
+}
+
+.u-margin-right45 {
+  margin-right: 45px;
+}
+
+.u-margin-left45 {
+  margin-left: 45px;
+}
+
+.u-padding-top10 {
+  padding-top: 10px;
+}
+
+.u-padding-top20 {
+  padding-top: 20px;
+}
+
+.u-padding-bottom10 {
+  padding-bottom: 10px;
+}
+
+.u-padding-bottom20 {
+  padding-bottom: 20px;
+}

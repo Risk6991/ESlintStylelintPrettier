@@ -1,3 +1,9 @@
+/**
+*   Font
+*   フォントの種類やサイズを管理・決定するクラス
+*   接頭辞としてf-をつける
+**/
+
 $font-index: W3 14px/28px Hiragino Sans;
 $font-main: W3 14px/24px Hiragino Sans;
 $font-small: W3 12px/18px Hiragino Sans;
@@ -18,22 +24,24 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 }
 
 //textの表示位置制御用クラス
-.u-text-alignL {
+.f-text-align-left {
   text-align: left;
 }
 
-.u-text-alignC {
+.f-text-align-center {
   text-align: center;
 }
 
-.fontTitle {
-  font: W6 18px/24px Hiragino Kaku Gothic Pro;
+.f-fontTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
   color: $color-text;
   letter-spacing: 0.72px;
   opacity: 1;
 }
 
-.fontSubTitle {
+.f-fontSubTitle {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: #b4b4b4;
   text-transform: uppercase;
@@ -41,89 +49,94 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
   opacity: 1;
 }
 
-.fontIndex {
+.f-fontIndex {
   font: W6 18px/24px Hiragino Kaku Gothic Pro;
   color: $color-text;
   letter-spacing: 0.72px;
   opacity: 1;
 }
 
-.fontIndex2 {
+.f-fontIndex2 {
   font: W6 14px/19px Hiragino Kaku Gothic Pro;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.fontList {
+.f-fontList {
   font: W3 14px/28px Hiragino Kaku Gothic Pro;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.paragraph {
+.f-paragraph {
   font: $font-main;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.paragraph-small {
-  font: $font-small;
+.f-paragraph-small {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.font-btn {
+.f-font-btn {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: $color-text;
   letter-spacing: 0.56px;
   opacity: 1;
 }
 
-.font-btn2 {
+.f-font-btn2 {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
   color: $color-white;
   letter-spacing: 0.56px;
   opacity: 1;
 }
 
-.fontLink {
+.f-fontLink {
   font: $font-mark;
   color: $color-main;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.fontLocation {
+.f-fontLocation {
   font: $font-mark;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.fontTime {
+.f-fontTime {
   font: W3 12px/18px Hiragino Kaku Gothic Pro;
   color: #333;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.fontPrice {
-  font: $font-price;
+.f-fontPrice {
+  font-family: 'Abel';
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.2;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
 }
 
-.fontYen {
+.f-fontYen {
   font: $font-yen;
   letter-spacing: 0;
 }
 
-.fontAddress {
+.f-fontAddress {
   font: $font-address;
   font-size: 12px;
   font-weight: normal;

@@ -1,7 +1,9 @@
-/*
-_layout.cshtml(共通レイアウト)のflex対応のために記述。
-all-wrap , header , footer ,main-areaの割合で制御しています。
-*/
+/**
+*   Layout
+*   パーツの配置や、ラッパーとしての幅や高さなどを決定するクラス
+*   接頭辞としてl-をつける
+**/
+
 .all-wrap {
   display: flex;
   flex-direction: column;
@@ -17,26 +19,39 @@ footer {
   flex: 1 0 auto;
 }
 
-.l-wrap {
+.l-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.l-flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.l-grid-col {
+.l-flex-start {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.l-grid-row {
+.l-flex-inline {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.l-flex-around {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
-.l-grid-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+//左右に余白を自動で取る。PCレイアウト用のクラス。
+.l-margin-auto {
+  margin: 0 auto;
 }
