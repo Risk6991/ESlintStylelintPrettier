@@ -4,10 +4,16 @@
 *   接頭辞としてl-をつける
 **/
 
+//サイズ調整用の関数
+$max-width: 768px;
+$width100: 100%;
+
 .all-wrap {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  width: $width100;
+  max-width: $max-width;
+  min-height: 100vh;
 }
 
 header,
@@ -17,6 +23,11 @@ footer {
 
 .main-area {
   flex: 1 0 auto;
+}
+
+//nav,ul,li要素を上書きする
+nav ul li {
+  display: inline-flex;
 }
 
 .l-flex-col {
@@ -41,9 +52,20 @@ footer {
   justify-content: flex-start;
 }
 
-.l-flex-inline {
+.l-flex-space-evenly {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.l-flex-inline-baseline {
   display: inline-flex;
   align-items: baseline;
+}
+
+.l-flex-inline-center {
+  display: inline-flex;
+  justify-content: center;
 }
 
 .l-flex-around {

@@ -1,0 +1,29 @@
+.c-menubar {
+  position: fixed;
+  display: flex;
+  width: $width100;
+  max-width: 768px;
+  height: 60px;
+  color: #333;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+
+.c-menubar__list {
+  display: flex;
+  width: $width100;
+}
+
+.c-iconArea__icon {
+  //display: flex;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+}
+
+.c-iconArea {
+  //display: flex;
+  width: 65px;
+  height: 50px;
+  padding: 0;
+}

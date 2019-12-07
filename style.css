@@ -84,7 +84,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Hiragino Sans', 'Osaka', 'メイリオ', 'verdana', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'Osaka', 'メイリオ', 'verdana', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
   font-size: 1.4rem;
   line-height: 1.4;
   color: #333; }
@@ -171,7 +171,9 @@ q::before {
 .all-wrap {
   display: flex;
   flex-direction: column;
-  height: 100vh; }
+  width: 100%;
+  max-width: 768px;
+  min-height: 100vh; }
 
 header,
 footer {
@@ -179,6 +181,9 @@ footer {
 
 .main-area {
   flex: 1 0 auto; }
+
+nav ul li {
+  display: inline-flex; }
 
 .l-flex-col {
   display: flex;
@@ -198,9 +203,18 @@ footer {
   align-items: flex-start;
   justify-content: flex-start; }
 
-.l-flex-inline {
+.l-flex-space-evenly {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly; }
+
+.l-flex-inline-baseline {
   display: inline-flex;
   align-items: baseline; }
+
+.l-flex-inline-center {
+  display: inline-flex;
+  justify-content: center; }
 
 .l-flex-around {
   display: flex;
@@ -233,6 +247,9 @@ footer {
 
 .u-margin-left45 {
   margin-left: 45px; }
+
+.u-margin-bottom30 {
+  margin-bottom: 30px; }
 
 .u-padding-top10 {
   padding-top: 10px; }
@@ -363,6 +380,26 @@ footer {
   letter-spacing: 0;
   opacity: 1; }
 
+.f-fontIcon {
+  display: flex;
+  font-family: 'Hiragino Sans';
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #999;
+  letter-spacing: 0;
+  opacity: 1; }
+
+/**
+*   Component
+*   使い回しのできるパーツを整理しまとめておくクラス
+*   接頭辞としてc-をつける
+*   また使い回しの効く状態クラスもここ
+*   接頭辞として-をつける
+**/
+.-shadow {
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+
 .c-btn {
   width: 300px;
   height: 40px;
@@ -398,13 +435,51 @@ footer {
   border-radius: 3px;
   opacity: 1; }
 
-.c-card--shadow {
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+.c-card__image > img {
+  width: 100%;
+  max-width: 335px;
+  height: 223px;
+  object-fit: cover; }
 
 .c-card__12hoursPrice {
   height: 37px; }
 
 .c-card__24hoursPrice {
   height: 37px; }
+
+.c-menubar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  max-width: 768px;
+  height: 60px;
+  color: #333;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+
+.c-menubar__list {
+  display: flex;
+  width: 100%; }
+
+.c-iconArea__icon {
+  width: 20px;
+  height: 20px;
+  line-height: 1; }
+
+.c-iconArea {
+  width: 65px;
+  height: 50px;
+  padding: 0; }
+
+.hero-image {
+  width: 100%;
+  height: 498px;
+  background-image: url(src/images/aracan-top2x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.hero-image__button {
+  padding-top: 436px; }
 
 /* =================================================================== */

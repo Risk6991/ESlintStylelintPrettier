@@ -8,6 +8,7 @@ $font-index: W3 14px/28px Hiragino Sans;
 $font-main: W3 14px/24px Hiragino Sans;
 $font-small: W3 12px/18px Hiragino Sans;
 $font-mark: W6 14px/14px Hiragino Sans;
+$font-icon: W6 11px/15px Hiragino Sans;
 $font-price: Regular 24px/29px Abel;
 $font-yen: Regular 24px/29px Abel;
 $font-address: Medium 12px/18px YuGothic;
@@ -142,6 +143,17 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
   font-weight: normal;
   line-height: 18px;
   color: $color-text2;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.f-fontIcon {
+  display: flex;
+  font-family: 'Hiragino Sans';
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $color-icon;
   letter-spacing: 0;
   opacity: 1;
 }

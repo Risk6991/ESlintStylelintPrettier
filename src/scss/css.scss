@@ -1,0 +1,233 @@
+@import 'materialize-css';
+@import '~vuejs-dialog/dist/vuejs-dialog.min.css';
+@import '~vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css';
+
+/**
+*   Design
+* =================================================================== */
+@import '_base';
+@import '_layout';
+@import '_utility';
+@import '_color';
+@import '_font';
+@import '_button';
+@import '_card';
+@import '_menubar';
+
+/* =================================================================== */
+
+[v-cloak] {
+  display: none;
+}
+
+// for animation
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+//SPサイズのハンバーガーメニューのメニューサイズを上書き
+.sidenav {
+  width: 180px;
+}
+
+//カルーセルスライダーの高さ調整
+//※インジケータの調整に必要。レスポンシブの高さの指定が将来的に必要になります。
+.carousel {
+  height: 30vh;
+}
+
+//カードサイズの制御
+.card .card-content {
+  //max-height: 400px;
+  padding: 2% 24px;
+}
+
+.card-image {
+  display: flex;
+  height: 240px;
+}
+
+.card-image > img {
+  flex: 1 1 auto;
+  width: 0%;
+}
+
+//Google Material icons + 文字列で縦を揃えるため一部上書き
+.text-flex {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* 命名規則、設計はRSCSSに基づき作成しています。
+hoge-hoge のようにハイフンで繋がれたものはコンポーネントを指しています。
+単語のみは最小要素（element）です。
+スコープを限定するため可能な限り孫セレクタで指定します。
+コンポーネントの後ろに追加で付与されたものは、配置用（レイアウト）です。
+-hoge のように先頭にハイフンがついているものは共通設計のものに追加で状態を与えられています。
+*/
+.title-area {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  //height: 50px; /* 高さはpx推奨 vhも可 */
+}
+
+.title-block {
+  width: 55%; /* ボックスの横幅を指定する */
+  > .makerName {
+    font-size: 20px; /* フォントのサイズを指定する */
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+  }
+
+  > .carName {
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+  }
+}
+
+.icon-area {
+  width: 30%; /* ボックスの横幅を指定する */
+  > .icon {
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+    //vertical-align: baseline;
+  }
+
+  > .description {
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+  }
+}
+
+.subTitle-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  //height: 40px;
+}
+
+.icon-block {
+  //width: 9%; /* ボックスの横幅を指定する */
+  flex: 0 1 9%;
+
+  > .icon {
+    line-height: 1; /* 行の高さを指定する 数値のみの入力推奨 */
+  }
+}
+
+.location-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  //width: 100%;
+  //height: 50px; /* 高さはpx推奨 vhも可 */
+
+  > .prefecture {
+    //width: 23%;
+    flex: 0 1 auto;
+    font-size: $responsive-font-9-12; /* フォントのサイズを指定する */
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  > .city {
+    //width: 31%;
+    flex: 0 1 auto;
+    font-size: 9px; /* フォントのサイズを指定する */
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+.location-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  //width: 100%;
+  //height: 50px; /* 高さはpx推奨 vhも可 */
+  > .landMark {
+    //width: 45%;
+    flex: 0 1 auto;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+.timeTable-block {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  //height: 50px; /* 高さはpx推奨 vhも可 */
+}
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  //width: 70px;
+  //height: 35px; /* 高さはpx推奨 vhも可 */
+  > .time {
+    width: 100%;
+    font-size: 12px; /* フォントのサイズを指定する */
+    line-height: 1;
+    text-align: center;
+  }
+
+  > .yen {
+    width: 20%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+
+  > .price {
+    width: 70%;
+    font-size: 14px; /* フォントのサイズを指定する */
+    line-height: 1;
+  }
+}
+
+.sticky-area {
+  height: 60px;
+}
+
+.sticky-block {
+  position: sticky;
+  top: 520px;
+  height: 60px;
+}
+
+.card-padding {
+  padding: 10px;
+}
+
+.datepicker-controls {
+  width: 250px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 498px;
+  background-image: url(../images/aracan-top2x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-image__button {
+  padding-top: 436px;
+}
