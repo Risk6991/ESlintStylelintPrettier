@@ -18,10 +18,32 @@
 }
 
 .c-btn--icon {
+  display: flex;
   width: 160px;
   background: $color-white 0% 0% no-repeat padding-box;
 
   @include btn;
+}
+
+.c-floatingNav {
+  position: sticky;
+  bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 70px;
+  height: 70px;
+  margin-left: 80%;
+  opacity: 1;
+}
+
+.c-floatingNav__Btn {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: $color-main;
+  border-style: none;
+  border-radius: 50px;
 }
 
 .-mainColor {

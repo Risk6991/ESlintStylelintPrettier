@@ -89,7 +89,12 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 
 .f-font-btn {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   color: $color-text;
+  text-align: center;
   letter-spacing: 0.56px;
   opacity: 1;
 }
@@ -155,5 +160,39 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
   line-height: 1.2;
   color: $color-icon;
   letter-spacing: 0;
+  opacity: 1;
+}
+
+.f-fontIcon--white {
+  display: flex;
+  font-family: 'Hiragino Sans';
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $color-white;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.f-fontNewEntry {
+  font-family: 'Abel';
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: $color-text;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+.f-fontNewEntry__sub {
+  font-family: 'Hiragino Sans';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $color-text;
+  text-align: center;
+  letter-spacing: 1.6px;
   opacity: 1;
 }

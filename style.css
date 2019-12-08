@@ -182,9 +182,6 @@ footer {
 .main-area {
   flex: 1 0 auto; }
 
-nav ul li {
-  display: inline-flex; }
-
 .l-flex-col {
   display: flex;
   flex-direction: column; }
@@ -248,6 +245,9 @@ nav ul li {
 .u-margin-left45 {
   margin-left: 45px; }
 
+.u-margin-bottom5 {
+  margin-bottom: 5px; }
+
 .u-margin-bottom30 {
   margin-bottom: 30px; }
 
@@ -256,6 +256,9 @@ nav ul li {
 
 .u-padding-top20 {
   padding-top: 20px; }
+
+.u-padding-bottom5 {
+  padding-bottom: 5px; }
 
 .u-padding-bottom10 {
   padding-bottom: 10px; }
@@ -330,7 +333,12 @@ nav ul li {
 
 .f-font-btn {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   color: #333;
+  text-align: center;
   letter-spacing: 0.56px;
   opacity: 1; }
 
@@ -390,6 +398,37 @@ nav ul li {
   letter-spacing: 0;
   opacity: 1; }
 
+.f-fontIcon--white {
+  display: flex;
+  font-family: 'Hiragino Sans';
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #fff;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.f-fontNewEntry {
+  font-family: 'Abel';
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.f-fontNewEntry__sub {
+  font-family: 'Hiragino Sans';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  text-align: center;
+  letter-spacing: 1.6px;
+  opacity: 1; }
+
 /**
 *   Component
 *   使い回しのできるパーツを整理しまとめておくクラス
@@ -398,7 +437,22 @@ nav ul li {
 *   接頭辞として-をつける
 **/
 .-shadow {
-  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+
+/**
+*   Project
+*   プロジェクト固有のパターンであり、いくつかのComponentと、それに該当しない要素によって構成されるものを定義します。
+*   再利用できるなど後からComponentクラスに移動することもありえます。また肥大化する場合はページごとにフォルダリング。
+*   接頭辞としてp-をつける
+**/
+.p-new-entry {
+  height: 112px;
+  background-color: #edf2f1; }
+
+.p-iconArea__icon {
+  width: 20px;
+  line-height: 1; }
 
 .c-btn {
   width: 300px;
@@ -415,12 +469,32 @@ nav ul li {
   opacity: 1; }
 
 .c-btn--icon {
+  display: flex;
   width: 160px;
   background: #fff 0% 0% no-repeat padding-box;
   height: 40px;
   border: 1px solid #30bfa7;
   border-radius: 3px;
   opacity: 1; }
+
+.c-floatingNav {
+  position: sticky;
+  bottom: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 70px;
+  height: 70px;
+  margin-left: 80%;
+  opacity: 1; }
+
+.c-floatingNav__Btn {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background-color: #30bfa7;
+  border-style: none;
+  border-radius: 50px; }
 
 .-mainColor {
   background: #30bfa7 0% 0% no-repeat padding-box; }
@@ -448,7 +522,8 @@ nav ul li {
   height: 37px; }
 
 .c-menubar {
-  position: fixed;
+  position: sticky;
+  bottom: -1px;
   display: flex;
   width: 100%;
   max-width: 768px;
@@ -463,7 +538,7 @@ nav ul li {
 
 .c-iconArea__icon {
   width: 20px;
-  height: 20px;
+  height: 25px;
   line-height: 1; }
 
 .c-iconArea {
