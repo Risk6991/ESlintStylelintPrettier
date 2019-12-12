@@ -5,12 +5,20 @@
 *   他種類のパーツ間の空き調整や、パーツとして認められないような、自由な振る舞いをする要素に対してはこちらのクラスを使用
 *   接頭辞としてu-をつける
 **/
+.u-margin-right5 {
+  margin-right: 5px;
+}
+
 .u-margin-right10 {
   margin-right: 10px;
 }
 
 .u-margin-right20 {
   margin-right: 20px;
+}
+
+.u-margin-left5 {
+  margin-left: 5px;
 }
 
 .u-margin-left10 {
@@ -33,8 +41,20 @@
   margin-bottom: 5px;
 }
 
+.u-margin-bottom10 {
+  margin-bottom: 10px;
+}
+
+.u-margin-bottom20 {
+  margin-bottom: 20px;
+}
+
 .u-margin-bottom30 {
   margin-bottom: 30px;
+}
+
+.u-padding-top5 {
+  padding-top: 5px;
 }
 
 .u-padding-top10 {
@@ -55,4 +75,45 @@
 
 .u-padding-bottom20 {
   padding-bottom: 20px;
+}
+
+.u-padding-left5 {
+  padding-left: 5px;
+}
+
+.u-padding-left10 {
+  padding-left: 10px;
+}
+
+.u-padding-left20 {
+  padding-left: 20px;
+}
+
+.u-padding-right5 {
+  padding-right: 5px;
+}
+
+.u-padding-right10 {
+  padding-right: 10px;
+}
+
+.u-padding-right20 {
+  padding-right: 20px;
+}
+
+//パーセンテージ指定
+.u-margin-right30p {
+  margin-right: 30%;
+}
+
+.u-margin-left10p {
+  margin-left: 10%;
+}
+
+.u-padding-right5p {
+  padding-right: 5%;
+}
+
+.u-padding-left5p {
+  padding-left: 5%;
 }

@@ -12,6 +12,12 @@
 
 </head>
 <body>
+    <div class="card-content">
+        <button class="waves-effect waves-light btn-small accent-3" v-on:click="deleteNewFrontImage(index)" :disabled="newFrontDamagesLength !== (index + 1)" type="button">×</button>
+        <input class="js-new-front-damege-input" type="file" accept="image/*" name="NewFrontDamages" v-on:change="(e) => onNewFrontFileChange(image, e)" capture="camera" id="02" />
+        <label for="02">キズ登録</label>
+    </div>
+
     <div class="row grey lighten-2">
         <div class="container white-text">
             <div class="section center">

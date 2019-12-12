@@ -35,6 +35,36 @@ footer {
   flex-direction: row;
 }
 
+.l-flex-wrap-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.l-flex-wrap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l-flex-align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.l-flex-justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.l-flex-justify-content-start {
+  display: flex;
+  justify-content: start;
+}
+
+.l-flex-justify-content-end {
+  display: flex;
+  justify-content: end;
+}
+
 .l-flex-center {
   display: flex;
   align-items: center;
@@ -47,10 +77,29 @@ footer {
   justify-content: flex-start;
 }
 
+.l-flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .l-flex-space-evenly {
   display: flex;
-  align-items: flex-end;
   justify-content: space-evenly;
+}
+
+.l-flex-space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.l-flex-align-items-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.l-flex-align-items-end {
+  display: flex;
+  align-items: flex-end;
 }
 
 .l-flex-inline-baseline {

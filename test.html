@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <div class="all-wrap white l-margin-auto">
     <header>
-      <div class="hero-image">
-        <div class="hero-image__button l-flex-row l-flex-space-evenly">
+      <div class="p-hero-image">
+        <div class="p-hero-image__button l-flex-row l-flex-space-evenly">
           <button class="c-btn--icon -shadow l-flex-center" type="submit">
             <a class="l-flex-inline-baseline" asp-controller="Home" asp-action="Index">
               <i class="p-iconArea__icon"><img src="src/images/aracan-icon__owner-resist.svg" alt=""></i>
@@ -35,6 +34,9 @@
       </div>
     </header>
     <main class="main-area" role="main">
+
+
+
       <article>
         <div class="c-card -shadow l-flex-col l-margin-auto">
           <div class="c-card__image u-padding-bottom20">
@@ -76,89 +78,90 @@
           </div>
         </div>
       </article>
+
       <article>
-        <div class="c-card -shadow l-flex-col l-margin-auto">
-          <div class="c-card__image u-padding-bottom20">
+        <div class="c-carImage -shadow l-flex-col l-flex-align-items-center l-margin-auto">
+          <div class="c-carImage__image">
             <img src="src/images/img-card-dummy.png" alt="">
           </div>
-          <div class="c-card__context">
-            <div class="c-card__title l-flex-col l-flex-start u-margin-left20 u-padding-bottom20">
+          <div class="c-card__titleArea l-flex-row l-flex-space-evenly">
+            <div class="c-card__titleArea__title">
               <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
               <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
             </div>
-            <div class="l-flex-row l-flex-around u-padding-bottom10">
-              <div class="c-card__12hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">12時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-              <div class="c-card__24hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">24時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="l-flex-row l-flex-center u-padding-top10 u-padding-bottom10">
-              <div class="c-card__landmark l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン"></i>
-                <span class="f-fontLocation u-margin-right10">本山駅</span>
-                <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
-              </div>
-              <div class="c-card__carDetail l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/icon-car.svg" alt="ランドマークのアイコン"></i>
-                <a href="">
-                  <span class="f-fontLink">詳細情報</span>
-                </a>
-              </div>
-            </div>
+            <span>申請中</span>
+          </div>
+          <div class="u-margin-bottom20"></div>
+        </div>
+        <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
+          <div class="c-titleArea__title l-flex-inline-baseline">
+            <i class="u-margin-right10">
+              <img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン">
+            </i>
+            <span class="f-fontTitle">受渡について</span>
           </div>
         </div>
       </article>
-      <article>
-        <div class="c-card -shadow l-flex-col l-margin-auto">
-          <div class="c-card__image u-padding-bottom20">
-            <img src="src/images/img-card-dummy.png" alt="">
+
+      <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
+        <div class="c-titleArea__title l-flex-inline-baseline">
+          <i class="u-margin-right10">
+            <img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン">
+          </i>
+          <span class="f-fontTitle">受渡について</span>
+        </div>
+      </div>
+      <div class="c-card__timeTable -shadow l-flex-col l-flex-justify-content-center l-margin-auto">
+        <div class="l-flex-row l-flex-around u-padding-top10 u-padding-bottom10">
+          <div class="c-card__12hoursPrice">
+            <p class="f-paragraph-small f-text-align-center">12時間</p>
+            <div class="l-flex-inline-baseline">
+              <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
+            </div>
           </div>
-          <div class="c-card__context">
-            <div class="c-card__title l-flex-col l-flex-start u-margin-left20 u-padding-bottom20">
-              <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
-              <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
+          <div class="c-card__24hoursPrice">
+            <p class="f-paragraph-small f-text-align-center">24時間</p>
+            <div class="l-flex-inline-baseline">
+              <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
             </div>
-            <div class="l-flex-row l-flex-around u-padding-bottom10">
-              <div class="c-card__12hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">12時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-              <div class="c-card__24hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">24時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="l-flex-row l-flex-center u-padding-top10 u-padding-bottom10">
-              <div class="c-card__landmark l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン"></i>
-                <span class="f-fontLocation u-margin-right10">本山駅</span>
-                <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
-              </div>
-              <div class="c-card__carDetail l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/icon-car.svg" alt="ランドマークのアイコン"></i>
-                <a href="">
-                  <span class="f-fontLink">詳細情報</span>
-                </a>
-              </div>
+          </div>
+          <div class="c-card__12hoursPrice">
+            <p class="f-paragraph-small f-text-align-center">それ以降</p>
+            <div class="l-flex-inline-baseline">
+              <span class="f-fontYen--hiLight">+</span><span class="f-fontYen--hiLight">¥</span><span class="f-fontPrice--hiLight">2,000</span>
             </div>
           </div>
         </div>
-      </article>
+      </div>
+      <div class="card l-flex-col l-flex-justify-content-start u-padding-left20 u-padding-top10 u-padding-bottom10">
+        <div class="p-deliveryPlace l-flex-row l-flex-space-around">
+          <div class="p-deliveryPlace__place">
+            <span>受渡場所</span>
+          </div>
+          <div class="c-card__landmark l-flex-row">
+            <span class="f-fontLocation u-margin-right10">本山駅</span>
+            <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
+          </div>
+        </div>
+        <div class="p-deliveryPlace l-flex-row l-flex-space-around">
+          <div class="p-deliveryPlace__place l-flex-wrap-wrap">
+            <span>その他対応可能な受渡場所</span>
+          </div>
+          <div class="c-card__landmark l-flex-row">
+            <span class="f-fontLocation u-margin-right10">星ヶ丘駅</span>
+            <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
+          </div>
+        </div>
+      </div>
     </main>
+    <div class="c-floatingNav">
+      <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+        <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
+          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat--white.svg" alt="吹き出しアイコン"></i>
+          <span class="f-fontIcon--white">予約する</span>
+        </button>
+      </form>
+    </div>
     <div class="c-floatingNav">
       <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
         <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">

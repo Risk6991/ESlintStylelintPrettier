@@ -190,6 +190,30 @@ footer {
   display: flex;
   flex-direction: row; }
 
+.l-flex-wrap-nowrap {
+  display: flex;
+  flex-wrap: nowrap; }
+
+.l-flex-wrap-wrap {
+  display: flex;
+  flex-wrap: wrap; }
+
+.l-flex-align-items-center {
+  display: flex;
+  align-items: center; }
+
+.l-flex-justify-content-center {
+  display: flex;
+  justify-content: center; }
+
+.l-flex-justify-content-start {
+  display: flex;
+  justify-content: start; }
+
+.l-flex-justify-content-end {
+  display: flex;
+  justify-content: end; }
+
 .l-flex-center {
   display: flex;
   align-items: center;
@@ -200,10 +224,25 @@ footer {
   align-items: flex-start;
   justify-content: flex-start; }
 
+.l-flex-space-between {
+  display: flex;
+  justify-content: space-between; }
+
 .l-flex-space-evenly {
   display: flex;
-  align-items: flex-end;
   justify-content: space-evenly; }
+
+.l-flex-space-around {
+  display: flex;
+  justify-content: space-around; }
+
+.l-flex-align-items-start {
+  display: flex;
+  align-items: flex-start; }
+
+.l-flex-align-items-end {
+  display: flex;
+  align-items: flex-end; }
 
 .l-flex-inline-baseline {
   display: inline-flex;
@@ -227,11 +266,17 @@ footer {
 *   他種類のパーツ間の空き調整や、パーツとして認められないような、自由な振る舞いをする要素に対してはこちらのクラスを使用
 *   接頭辞としてu-をつける
 **/
+.u-margin-right5 {
+  margin-right: 5px; }
+
 .u-margin-right10 {
   margin-right: 10px; }
 
 .u-margin-right20 {
   margin-right: 20px; }
+
+.u-margin-left5 {
+  margin-left: 5px; }
 
 .u-margin-left10 {
   margin-left: 10px; }
@@ -248,8 +293,17 @@ footer {
 .u-margin-bottom5 {
   margin-bottom: 5px; }
 
+.u-margin-bottom10 {
+  margin-bottom: 10px; }
+
+.u-margin-bottom20 {
+  margin-bottom: 20px; }
+
 .u-margin-bottom30 {
   margin-bottom: 30px; }
+
+.u-padding-top5 {
+  padding-top: 5px; }
 
 .u-padding-top10 {
   padding-top: 10px; }
@@ -265,6 +319,36 @@ footer {
 
 .u-padding-bottom20 {
   padding-bottom: 20px; }
+
+.u-padding-left5 {
+  padding-left: 5px; }
+
+.u-padding-left10 {
+  padding-left: 10px; }
+
+.u-padding-left20 {
+  padding-left: 20px; }
+
+.u-padding-right5 {
+  padding-right: 5px; }
+
+.u-padding-right10 {
+  padding-right: 10px; }
+
+.u-padding-right20 {
+  padding-right: 20px; }
+
+.u-margin-right30p {
+  margin-right: 30%; }
+
+.u-margin-left10p {
+  margin-left: 10%; }
+
+.u-padding-right5p {
+  padding-right: 5%; }
+
+.u-padding-left5p {
+  padding-left: 5%; }
 
 /**
 *   Font
@@ -325,7 +409,7 @@ footer {
 
 .f-paragraph-small {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1;
   color: #333;
   letter-spacing: 0;
@@ -355,7 +439,10 @@ footer {
   opacity: 1; }
 
 .f-fontLocation {
-  font: W6 14px/14px Hiragino Sans;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   color: #333;
   letter-spacing: 0;
   opacity: 1; }
@@ -375,8 +462,22 @@ footer {
   letter-spacing: 0;
   opacity: 1; }
 
+.f-fontPrice--hiLight {
+  font-family: 'Abel';
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: #f37;
+  letter-spacing: 0;
+  opacity: 1; }
+
 .f-fontYen {
   font: Regular 24px/29px Abel;
+  letter-spacing: 0; }
+
+.f-fontYen--hiLight {
+  font: Regular 24px/29px Abel;
+  color: #f37;
   letter-spacing: 0; }
 
 .f-fontAddress {
@@ -429,6 +530,16 @@ footer {
   letter-spacing: 1.6px;
   opacity: 1; }
 
+.f-fontNickName {
+  font-family: 'Hiragino Sans';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 1; }
+
 /**
 *   Component
 *   使い回しのできるパーツを整理しまとめておくクラス
@@ -453,6 +564,82 @@ footer {
 .p-iconArea__icon {
   width: 20px;
   line-height: 1; }
+
+.p-carDetail__titleArea {
+  width: 100%;
+  height: 60px;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+
+.p-titleArea__title {
+  margin-left: 10%; }
+
+.p-delivery {
+  width: 100%;
+  max-width: 650px;
+  height: 128px;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+
+.p-delivery__place {
+  height: 50px; }
+
+.p-delivery__place--other {
+  height: 74px; }
+
+.p-deliveryPlace {
+  width: 84px;
+  height: 14px;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.p-otherPlace {
+  width: 112px;
+  height: 38px;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.p-owner-carInfo {
+  width: 100%;
+  height: 318px; }
+
+.p-owner {
+  height: 75px; }
+
+.p-car-info {
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.p-share-condition {
+  width: 100%;
+  max-width: 650px; }
+
+.p-equipment {
+  width: 100%;
+  max-width: 650px;
+  height: auto; }
+
+.p-equipment__item {
+  width: calc(100% / 5);
+  padding: 10px; }
 
 .c-btn {
   width: 300px;
@@ -485,7 +672,7 @@ footer {
   justify-content: flex-end;
   width: 70px;
   height: 70px;
-  margin-left: 80%;
+  margin-left: 78%;
   opacity: 1; }
 
 .c-floatingNav__Btn {
@@ -509,17 +696,52 @@ footer {
   border-radius: 3px;
   opacity: 1; }
 
-.c-card__image > img {
+.c-card__timeTable {
   width: 100%;
-  max-width: 335px;
-  height: 223px;
-  object-fit: cover; }
+  height: 80px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
+
+.c-card__titleArea {
+  width: 100%; }
 
 .c-card__12hoursPrice {
   height: 37px; }
 
 .c-card__24hoursPrice {
   height: 37px; }
+
+.c-titleArea {
+  width: 100%;
+  height: 60px;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+
+.c-titleArea__title {
+  margin-left: 5%; }
+
+.c-carImage {
+  width: 100%;
+  height: 328px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
+
+.c-carImage__image {
+  width: 375px;
+  height: 255px;
+  border-radius: 3px 3px 0 0;
+  opacity: 1; }
+
+.c-carImage__image > img {
+  width: 100%;
+  max-width: 768px;
+  height: auto;
+  object-fit: cover; }
+
+.c-carDetail__title {
+  width: 295px; }
 
 .c-menubar {
   position: sticky;
@@ -546,7 +768,7 @@ footer {
   height: 50px;
   padding: 0; }
 
-.hero-image {
+.p-hero-image {
   width: 100%;
   height: 498px;
   background-image: url(src/images/aracan-top2x.jpg);
@@ -554,7 +776,44 @@ footer {
   background-position: center;
   background-size: cover; }
 
-.hero-image__button {
+.p-hero-image__button {
   padding-top: 436px; }
 
 /* =================================================================== */
+label > input {
+  display: none;
+  /* アップロードボタンのスタイルを無効にする */ }
+
+label {
+  padding: 10px;
+  /* ラベルとテキスト間の余白を指定する */
+  color: #aaa;
+  /* ラベルテキストの色を指定する */
+  background-color: #006dd9;
+  /* ラベルの背景色を指定する */
+  border: double 4px #aaa;
+  /* ラベルのボーダーを指定する */ }
+
+input[type='file'] {
+  display: none; }
+
+label {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  background: #ddd;
+  border-radius: 10px; }
+
+label::after {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -140px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px; }
+
+label.changed::after {
+  content: ''; }
+
+.filename {
+  font-size: 12px; }

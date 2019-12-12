@@ -80,7 +80,7 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 
 .f-paragraph-small {
   font-size: 12px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1;
   color: $color-text;
   letter-spacing: 0;
@@ -114,7 +114,10 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 }
 
 .f-fontLocation {
-  font: $font-mark;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   color: $color-text;
   letter-spacing: 0;
   opacity: 1;
@@ -137,8 +140,24 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
   opacity: 1;
 }
 
+.f-fontPrice--hiLight {
+  font-family: 'Abel';
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.2;
+  color: $color-hiLight;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
 .f-fontYen {
   font: $font-yen;
+  letter-spacing: 0;
+}
+
+.f-fontYen--hiLight {
+  font: $font-yen;
+  color: $color-hiLight;
   letter-spacing: 0;
 }
 
@@ -194,5 +213,16 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
   color: $color-text;
   text-align: center;
   letter-spacing: 1.6px;
+  opacity: 1;
+}
+
+.f-fontNickName {
+  font-family: 'Hiragino Sans';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $color-text;
+  text-align: left;
+  letter-spacing: 0;
   opacity: 1;
 }
