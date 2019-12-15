@@ -25,36 +25,42 @@ footer {
   flex: 1 0 auto;
 }
 
+//左右に余白を自動で取る。PCレイアウト用のクラス。
+.l-margin-auto {
+  margin: 0 auto;
+}
+
+// y軸方向（列）への制御を行う。
 .l-flex-col {
   display: flex;
   flex-direction: column;
 }
 
+// x軸方向（行）への制御を行う。
 .l-flex-row {
   display: flex;
   flex-direction: row;
 }
 
+//折返し制御 nowrapで折り返させない
 .l-flex-wrap-nowrap {
   display: flex;
   flex-wrap: nowrap;
 }
 
+//折返し制御 wrapで折り返す。使用する場合はメディアクエリと併用する
 .l-flex-wrap-wrap {
   display: flex;
   flex-wrap: wrap;
 }
 
+//縦横
 .l-flex-align-items-center {
   display: flex;
   align-items: center;
 }
 
-.l-flex-justify-content-center {
-  display: flex;
-  justify-content: center;
-}
-
+//左揃え、上段寄せに用いるクラス。flex-directionでxy軸が反転している場合があります。
 .l-flex-justify-content-start {
   display: flex;
   justify-content: start;
@@ -63,6 +69,11 @@ footer {
 .l-flex-justify-content-end {
   display: flex;
   justify-content: end;
+}
+
+.l-flex-justify-content-center {
+  display: flex;
+  justify-content: center;
 }
 
 .l-flex-center {
@@ -82,11 +93,13 @@ footer {
   justify-content: space-between;
 }
 
+//均等配置用クラス
 .l-flex-space-evenly {
   display: flex;
   justify-content: space-evenly;
 }
 
+//均等配置 両側のみ半分の領域を取る
 .l-flex-space-around {
   display: flex;
   justify-content: space-around;
@@ -97,11 +110,13 @@ footer {
   align-items: flex-start;
 }
 
+//y軸方向下段揃え用
 .l-flex-align-items-end {
   display: flex;
   align-items: flex-end;
 }
 
+//文字の高さに揃えるクラス。flexの特性を併せ持つ
 .l-flex-inline-baseline {
   display: inline-flex;
   align-items: baseline;
@@ -110,14 +125,4 @@ footer {
 .l-flex-inline-center {
   display: inline-flex;
   justify-content: center;
-}
-
-.l-flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-//左右に余白を自動で取る。PCレイアウト用のクラス。
-.l-margin-auto {
-  margin: 0 auto;
 }

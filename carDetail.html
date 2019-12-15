@@ -28,6 +28,34 @@
           </div>
         </div>
       </article>
+
+
+
+      <article>
+        <div class="c-carImage -shadow l-flex-col l-flex-align-items-center">
+            <div class="carousel carousel-slider">
+                @foreach(var image in Model.CarImagePaths)
+                {
+                <a class="carousel-item" href="#">
+                    <div class="c-carImage__image l-margin-auto">
+                        <image src="src/images/img-card-dummy.png" />
+                    </div>
+                </a>
+                }
+            </div>
+            <div class="c-carDetail">
+                <div class="c-carDetail__title u-padding-top20">
+                    <h5 class="f-fontSubTitle">@Html.DisplayFor(model => model.MakerName)</h5>
+                    <h5 class="f-fontTitle">@Html.DisplayFor(model => model.CarName)</h5>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="u-margin-bottom10"></div>
+
+
+
+
       <div class="u-margin-bottom10"></div>
       <article>
         <div class="c-card__timeTable -shadow l-flex-col l-flex-justify-content-center l-margin-auto">
@@ -54,6 +82,34 @@
         </div>
       </article>
       <div class="u-margin-bottom10"></div>
+
+
+
+      <article>
+        <div class="c-card__timeTable -shadow l-flex-col l-flex-justify-content-center l-margin-auto">
+            <div class="l-flex-row l-flex-space-around u-padding-top10 u-padding-bottom10">
+                <div class="c-card__12hoursPrice">
+                    <p class="f-paragraph-small f-text-align-center">@Html.DisplayNameFor(model => model.FeeBy12Hour)</p>
+                    <div class="l-flex-inline-baseline">
+                        <span class="f-fontYen">¥</span><span class="f-fontPrice">@Html.DisplayFor(model => model.FeeBy12Hour)</span>
+                    </div>
+                </div>
+                <div class="c-card__12hoursPrice">
+                    <p class="f-paragraph-small f-text-align-center">@Html.DisplayNameFor(model => model.FeeFromThen)</p>
+                    <div class="l-flex-inline-baseline">
+                        <span class="f-fontYen--hiLight">+</span><span class="f-fontYen--hiLight">¥</span><span class="f-fontPrice--hiLight">@Html.DisplayFor(model => model.FeeFromThen)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="u-margin-bottom10"></div>
+
+
+
+
+
+
       <article>
         <div class="-shadow">
           <div class="c-titleArea l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
