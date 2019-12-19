@@ -25,131 +25,79 @@
 
 
 
-      <article>
-        <div class="c-card -shadow l-flex-col l-margin-auto">
-          <div class="c-card__image u-padding-bottom20">
-            <img src="src/images/img-card-dummy.png" alt="">
-          </div>
-          <div class="c-card__context">
-            <div class="c-card__title l-flex-col l-flex-start u-margin-left20 u-padding-bottom20">
-              <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
-              <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
-            </div>
-            <div class="l-flex-row l-flex-around u-padding-bottom10">
-              <div class="c-card__12hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">12時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-              <div class="c-card__24hoursPrice">
-                <p class="f-paragraph-small f-text-align-center">24時間</p>
-                <div class="l-flex-inline-baseline">
-                  <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
-                </div>
-              </div>
-            </div>
-            <div class="divider"></div>
-            <div class="l-flex-row l-flex-center u-padding-top10 u-padding-bottom10">
-              <div class="c-card__landmark l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン"></i>
-                <span class="f-fontLocation u-margin-right10">本山駅</span>
-                <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
-              </div>
-              <div class="c-card__carDetail l-flex-row">
-                <i class="u-margin-right10"><img src="src/images/icon-car.svg" alt="ランドマークのアイコン"></i>
-                <a href="">
-                  <span class="f-fontLink">詳細情報</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article>
-        <div class="-shadow">
-            <div class="c-titleArea l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
-                <div class="c-titleArea__title l-flex-inline-baseline">
-                    <i class="u-margin-right10">
-                        <img src="~/images/aracan-icon__info.svg" alt="シェア条件のアイコン">
-                    </i>
-                    <span class="f-fontTitle">仕様</span>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="p-equipment l-flex-row l-flex-justify-content-start l-flex-align-items-center
-              l-flex-wrap-wrap l-margin-auto white">
-                @foreach (var specPath in Model.SpecPaths)
-                {
-                <div class="p-equipment__spec">
-                    <i class="u-margin-right10">
-                        <img src="@specPath" alt="仕様のアイコン">
-                    </i>
-                </div>
-                }
-            </div>
-            <div class="divider"></div>
-            <div class="c-titleArea l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
-                <div class="c-titleArea__title l-flex-inline-baseline">
-                    <i class="u-margin-right10">
-                        <img src="~/images/aracan-icon__info.svg" alt="装備のアイコン">
-                    </i>
-                    <span class="f-fontTitle">装備</span>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="p-equipment l-flex-col l-flex-justify-content-start l-flex-align-items-center
-              l-flex-wrap-wrap l-margin-auto white">
-                @foreach (var equipment in Model.Equipments)
-                {
-                <div class="p-equipment__item u-padding-top10 u-padding-bottom10">
-                    <i class="u-margin-right10">
-                        <span>@equipment</span>
-                    </i>
-                    <div class="divider"></div>
-                </div>
-                }
-            </div>
-        </div>
-    </article>
-
-
-
-      <article>
-        <div class="c-carImage -shadow l-flex-col l-flex-align-items-center l-margin-auto">
-          <div class="c-carImage__image">
-            <img src="src/images/img-card-dummy.png" alt="">
-          </div>
-          <div class="c-card__titleArea l-flex-row l-flex-space-evenly">
-            <div class="c-card__titleArea__title">
-              <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
-              <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
-            </div>
-            <span>申請中</span>
-          </div>
-          <div class="u-margin-bottom20"></div>
-        </div>
-        <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center u-margin-bottom10">
-          <div class="c-titleArea__title l-flex-inline-baseline">
-            <i class="u-margin-right10">
-              <img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン">
-            </i>
-            <span class="f-fontTitle">受渡について</span>
-          </div>
-        </div>
-      </article>
-
-      <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
-        <div class="c-titleArea__title l-flex-inline-baseline">
-          <i class="u-margin-right10">
-            <img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン">
-          </i>
-          <span class="f-fontTitle">受渡について</span>
-        </div>
+      <div class="btn btn-primary">
+        <a class="u-padding-top10 u-padding-bottom10" asp-controller="DriverBookings" asp-action="Index">ドライバー予定</a>
+        <div class="divider"></div>
       </div>
-      <div class="c-card__timeTable -shadow l-flex-col l-flex-justify-content-center l-margin-auto">
-        <div class="l-flex-row l-flex-around u-padding-top10 u-padding-bottom10">
+      <div class="col s6">
+        <div class="section">
+          <div class="btn btn-primary white teal-text">
+            <a class="u-padding-top10 u-padding-bottom10" asp-controller="OwnerBookings" asp-action="Index">オーナー予定</a>
+          </div>
+        </div>
+        <div class="divider"></div>
+      </div>
+      <div class="c-carDetail">
+        <div class="c-carDetail__title u-padding-top20">
+          <span>申請中</span>
+          <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
+          <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
+        </div>
+        <div>
+          <div>
+            <span>開始日時</span>
+            <span>2019/12/19 14:13:50</span>
+          </div>
+          <div>
+            <span>終了日時</span>
+            <span>2019/12/19 14:13:50</span>
+          </div>
+          <div>
+            <span>受渡場所</span>
+            <span>愛知県</span>
+            <span>みよし市</span>
+            <span>三好ヶ丘駅</span>
+          </div>
+          <div>
+            <span>料金</span>
+            <span>12時間</span>
+            <span>¥ 10,000</span>
+          </div>
+        </div>
+        <div>
+          <img src="src/images/aracan-icon__user.svg" alt="" shape="circle" height="64">
+          <div>リョウ さん</div>
+        </div>
+        <a asp-controller="DriverBookings" asp-action="Details" asp-route-id="@item.BookingId" id="back_@item.BookingId">詳細</a>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <article>
+    <div class="c-card -shadow l-flex-col l-margin-auto">
+      <div class="c-card__image u-padding-bottom20">
+        <img src="src/images/img-card-dummy.png" alt="">
+      </div>
+      <div class="c-card__context">
+        <div class="c-card__title l-flex-col l-flex-start u-margin-left20 u-padding-bottom20">
+          <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
+          <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
+        </div>
+        <div class="l-flex-row l-flex-around u-padding-bottom10">
           <div class="c-card__12hoursPrice">
             <p class="f-paragraph-small f-text-align-center">12時間</p>
             <div class="l-flex-inline-baseline">
@@ -162,89 +110,81 @@
               <span class="f-fontYen">¥</span><span class="f-fontPrice">000,000</span>
             </div>
           </div>
-          <div class="c-card__12hoursPrice">
-            <p class="f-paragraph-small f-text-align-center">それ以降</p>
-            <div class="l-flex-inline-baseline">
-              <span class="f-fontYen--hiLight">+</span><span class="f-fontYen--hiLight">¥</span><span class="f-fontPrice--hiLight">2,000</span>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="card l-flex-col l-flex-justify-content-start u-padding-left20 u-padding-top10 u-padding-bottom10">
-        <div class="p-deliveryPlace l-flex-row l-flex-space-around">
-          <div class="p-deliveryPlace__place">
-            <span>受渡場所</span>
-          </div>
+        <div class="divider"></div>
+        <div class="l-flex-row l-flex-center u-padding-top10 u-padding-bottom10">
           <div class="c-card__landmark l-flex-row">
+            <i class="u-margin-right10"><img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン"></i>
             <span class="f-fontLocation u-margin-right10">本山駅</span>
             <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
           </div>
-        </div>
-        <div class="p-deliveryPlace l-flex-row l-flex-space-around">
-          <div class="p-deliveryPlace__place l-flex-wrap-wrap">
-            <span>その他対応可能な受渡場所</span>
-          </div>
-          <div class="c-card__landmark l-flex-row">
-            <span class="f-fontLocation u-margin-right10">星ヶ丘駅</span>
-            <span class="f-fontAddress u-margin-right45">愛知県 名古屋市</span>
+          <div class="c-card__carDetail l-flex-row">
+            <i class="u-margin-right10"><img src="src/images/icon-car.svg" alt="ランドマークのアイコン"></i>
+            <a href="">
+              <span class="f-fontLink">詳細情報</span>
+            </a>
           </div>
         </div>
       </div>
-    </main>
-    <div class="c-floatingNav">
-      <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
-        <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
-          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat--white.svg" alt="吹き出しアイコン"></i>
-          <span class="f-fontIcon--white">予約する</span>
-        </button>
-      </form>
     </div>
-    <div class="c-floatingNav">
-      <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
-        <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
-          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__search--white.svg" alt="虫眼鏡アイコン"></i>
-          <span class="f-fontIcon--white">車を探す</span>
-        </button>
-      </form>
-    </div>
-    <nav class="c-menubar f-text-align-center">
-      <ul class="c-menubar__list">
-        <li class="c-menubar__list l-flex-center l-flex-around">
-          <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Home" asp-action="Index">
-            <i class="c-iconArea__icon"><img src="src/images/aracan-icon__home.svg" alt=""></i>
-            <span class="f-fontIcon">トップ</span>
-          </a>
-        </li>
-        <li class="c-menubar__list l-flex-center l-flex-around">
-          <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Chats" asp-action="Index">
-            <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat.svg" alt=""></i>
-            <span class="f-fontIcon">チャット</span>
-          </a>
-        </li>
-        <li class="c-menubar__list l-flex-center l-flex-around">
-          <a class="c-iconArea l-flex-col l-flex-center" asp-controller="MyPages" asp-action="Index">
-            <i class="c-iconArea__icon"><img src="src/images/aracan-icon__user.svg" alt=""></i>
-            <span class="f-fontIcon">マイページ</span>
-          </a>
-        </li>
-        <li class="c-menubar__list l-flex-center l-flex-around">
-          <a class="c-iconArea l-flex-col l-flex-center" asp-controller="OwnerBookings" asp-action="Index">
-            <i class="c-iconArea__icon"><img src="src/images/aracan-icon__calendar.svg" alt=""></i>
-            <span class="f-fontIcon">予定
-            </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <footer class="page-footer grey lighten-2">
-      <div class="footer-copyright grey">
-        <div class="container center">
-          © Aracan
-        </div>
+  </article>
+
+
+  </main>
+  <div class="c-floatingNav">
+    <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+      <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
+        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat--white.svg" alt="吹き出しアイコン"></i>
+        <span class="f-fontIcon--white">予約する</span>
+      </button>
+    </form>
+  </div>
+  <div class="c-floatingNav">
+    <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+      <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
+        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__search--white.svg" alt="虫眼鏡アイコン"></i>
+        <span class="f-fontIcon--white">車を探す</span>
+      </button>
+    </form>
+  </div>
+  <nav class="c-menubar f-text-align-center">
+    <ul class="c-menubar__list">
+      <li class="c-menubar__list l-flex-center l-flex-around">
+        <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Home" asp-action="Index">
+          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__home.svg" alt=""></i>
+          <span class="f-fontIcon">トップ</span>
+        </a>
+      </li>
+      <li class="c-menubar__list l-flex-center l-flex-around">
+        <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Chats" asp-action="Index">
+          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat.svg" alt=""></i>
+          <span class="f-fontIcon">チャット</span>
+        </a>
+      </li>
+      <li class="c-menubar__list l-flex-center l-flex-around">
+        <a class="c-iconArea l-flex-col l-flex-center" asp-controller="MyPages" asp-action="Index">
+          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__user.svg" alt=""></i>
+          <span class="f-fontIcon">マイページ</span>
+        </a>
+      </li>
+      <li class="c-menubar__list l-flex-center l-flex-around">
+        <a class="c-iconArea l-flex-col l-flex-center" asp-controller="OwnerBookings" asp-action="Index">
+          <i class="c-iconArea__icon"><img src="src/images/aracan-icon__calendar.svg" alt=""></i>
+          <span class="f-fontIcon">予定
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <footer class="page-footer grey lighten-2">
+    <div class="footer-copyright grey">
+      <div class="container center">
+        © Aracan
       </div>
-    </footer>
-    <script src="src/lib/jquery/dist/jquery.min.js"></script>
-    <script src="src/dist/main.js" asp-append-version="true"></script>
+    </div>
+  </footer>
+  <script src="src/lib/jquery/dist/jquery.min.js"></script>
+  <script src="src/dist/main.js" asp-append-version="true"></script>
   </div>
 </body>
 </html>
