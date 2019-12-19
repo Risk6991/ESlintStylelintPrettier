@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-light-oil" transform="translate(-152 -440)">
+    <rect id="長方形_1576" data-name="長方形 1576" width="71" height="74" transform="translate(152 440)" fill="#fff"/>
+    <text id="ディーゼル" transform="translate(188 507)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-29.52" y="0">ディーゼル</tspan></text>
+    <g id="icon" transform="translate(614.567 -916)">
+      <g id="グループ_1784" data-name="グループ 1784" transform="translate(-451.567 1356)">
+        <circle id="楕円形_33" data-name="楕円形 33" cx="25" cy="25" r="25" transform="translate(0 0)" fill="#30bfa7"/>
+        <path id="パス_46" data-name="パス 46" d="M509.607,106.1a.654.654,0,0,0,.269-.823l-1.824-4.476a.685.685,0,0,0-.811-.389l-.1.029c-.217-.3-.439-.594-.679-.875a12.8,12.8,0,0,0-2.14-2V99.8a11.721,11.721,0,0,1,1.058,1.249.657.657,0,0,0-.129.711l1.824,4.476a.679.679,0,0,0,.692.4,15.062,15.062,0,0,1,.252,2.747,13.692,13.692,0,0,1-3.7,9.583v2.242a12.8,12.8,0,0,0,2.14-2,15.081,15.081,0,0,0,3.495-9.826A16.117,16.117,0,0,0,509.607,106.1Z" transform="translate(-465.596 -86.26)" fill="#fff"/>
+        <rect id="長方形_51" data-name="長方形 51" width="25.234" height="33.85" transform="translate(12.567 8.333)" fill="#fff"/>
+        <rect id="長方形_52" data-name="長方形 52" width="28.113" height="2.909" transform="translate(10.638 39.274)" fill="#fff"/>
+        <text id="軽油" transform="translate(14.567 27.797)" fill="#30bfa7" font-size="10" font-family="HiraginoSans-W3, Hiragino Sans"><tspan x="0" y="0">軽油</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

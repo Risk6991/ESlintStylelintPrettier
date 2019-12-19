@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-drivesystem-ff" transform="translate(-10 -1280)">
+    <rect id="長方形_1608" data-name="長方形 1608" width="71" height="74" transform="translate(10 1280)" fill="#fff"/>
+    <g id="icon" transform="translate(646 -841)">
+      <g id="グループ_1764" data-name="グループ 1764" transform="translate(-625 2121)">
+        <circle id="楕円形_8" data-name="楕円形 8" cx="25" cy="25" r="25" fill="#30bfa7"/>
+        <rect id="長方形_26" data-name="長方形 26" width="19.167" height="40.833" rx="7.198" transform="translate(15.417 5.417)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <g id="グループ_25" data-name="グループ 25" transform="translate(16.667 10)">
+          <g id="グループ_24" data-name="グループ 24">
+            <rect id="長方形_27" data-name="長方形 27" width="3.333" height="6.667" rx="0.8" fill="#fff"/>
+          </g>
+          <rect id="長方形_28" data-name="長方形 28" width="3.333" height="6.667" rx="0.8" transform="translate(13.333)" fill="#fff"/>
+          <rect id="長方形_29" data-name="長方形 29" width="13.333" height="0.833" transform="translate(2.5 2.5)" fill="#fff"/>
+        </g>
+        <g id="グループ_27" data-name="グループ 27" transform="translate(16.667 34.167)">
+          <g id="グループ_26" data-name="グループ 26">
+            <rect id="長方形_30" data-name="長方形 30" width="3.333" height="6.667" rx="0.8" fill="#fff"/>
+          </g>
+          <rect id="長方形_31" data-name="長方形 31" width="3.333" height="6.667" rx="0.8" transform="translate(13.333)" fill="#fff"/>
+          <rect id="長方形_32" data-name="長方形 32" width="13.333" height="0.833" transform="translate(2.5 2.5)" fill="#fff"/>
+        </g>
+        <text id="FF" transform="translate(20.642 28.301)" fill="#fff" font-size="12" font-family="AvenirNextCondensed-Regular, Avenir Next Condensed" letter-spacing="-0.06em"><tspan x="0" y="0">FF</tspan></text>
+        <rect id="長方形_33" data-name="長方形 33" width="5.833" height="5.926" transform="translate(22.083 10)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="FF-2" data-name="FF" transform="translate(46 1347)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-7.224" y="0">FF</tspan></text>
+  </g>
+</svg>

@@ -10,27 +10,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="all-wrap white l-margin-auto">
+  <div class="all-wrap white l-margin-auto" ontouchstart="">
     <header>
-      <div class="p-hero-image">
-        <div class="p-hero-image__button l-flex-row l-flex-space-evenly">
-          <button class="c-btn--icon -shadow l-flex-center" type="submit">
-            <a class="l-flex-inline-baseline" asp-controller="Home" asp-action="Index">
-              <i class="p-iconArea__icon"><img src="src/images/aracan-icon__owner-resist.svg" alt=""></i>
-              <span class="f-font-btn">オーナー登録</span>
-            </a>
-          </button>
-          <button class="c-btn--icon -shadow l-flex-center" type="submit">
-            <a class="l-flex-inline-baseline" asp-controller="Home" asp-action="Index">
-              <i class="p-iconArea__icon"><img src="src/images/aracan-icon__driver-resist.svg" alt=""></i>
-              <span class="f-font-btn">ドライバー登録</span>
-            </a>
-          </button>
-        </div>
-      </div>
-      <div class="p-new-entry l-flex-col l-flex-center">
-        <h5 class="f-fontNewEntry">New Entry</h5>
-        <h5 class="f-fontNewEntry__sub">新着のクルマ</h5>
+      <div class="c-header l-flex-row l-flex-center">
+        <a href="">
+          <i class="c-header__icon">
+            <img src="src/images/aracan-icon__arrow.svg" alt="">
+          </i>
+        </a>
+        <span class="c-header__title f-fontTitle">予約リクエスト</span>
       </div>
     </header>
     <main class="main-area" role="main">
@@ -80,6 +68,55 @@
       </article>
 
       <article>
+        <div class="-shadow">
+            <div class="c-titleArea l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
+                <div class="c-titleArea__title l-flex-inline-baseline">
+                    <i class="u-margin-right10">
+                        <img src="~/images/aracan-icon__info.svg" alt="シェア条件のアイコン">
+                    </i>
+                    <span class="f-fontTitle">仕様</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-equipment l-flex-row l-flex-justify-content-start l-flex-align-items-center
+              l-flex-wrap-wrap l-margin-auto white">
+                @foreach (var specPath in Model.SpecPaths)
+                {
+                <div class="p-equipment__spec">
+                    <i class="u-margin-right10">
+                        <img src="@specPath" alt="仕様のアイコン">
+                    </i>
+                </div>
+                }
+            </div>
+            <div class="divider"></div>
+            <div class="c-titleArea l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
+                <div class="c-titleArea__title l-flex-inline-baseline">
+                    <i class="u-margin-right10">
+                        <img src="~/images/aracan-icon__info.svg" alt="装備のアイコン">
+                    </i>
+                    <span class="f-fontTitle">装備</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="p-equipment l-flex-col l-flex-justify-content-start l-flex-align-items-center
+              l-flex-wrap-wrap l-margin-auto white">
+                @foreach (var equipment in Model.Equipments)
+                {
+                <div class="p-equipment__item u-padding-top10 u-padding-bottom10">
+                    <i class="u-margin-right10">
+                        <span>@equipment</span>
+                    </i>
+                    <div class="divider"></div>
+                </div>
+                }
+            </div>
+        </div>
+    </article>
+
+
+
+      <article>
         <div class="c-carImage -shadow l-flex-col l-flex-align-items-center l-margin-auto">
           <div class="c-carImage__image">
             <img src="src/images/img-card-dummy.png" alt="">
@@ -93,7 +130,7 @@
           </div>
           <div class="u-margin-bottom20"></div>
         </div>
-        <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center">
+        <div class="c-titleArea -shadow l-flex-row  l-flex-justify-content-start l-flex-align-items-center u-margin-bottom10">
           <div class="c-titleArea__title l-flex-inline-baseline">
             <i class="u-margin-right10">
               <img src="src/images/iconmonstr-location-1.svg" alt="ランドマークのアイコン">

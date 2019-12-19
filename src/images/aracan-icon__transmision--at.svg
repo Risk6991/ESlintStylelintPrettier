@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-AT" transform="translate(-10 -524)">
+    <rect id="長方形_1579" data-name="長方形 1579" width="71" height="74" transform="translate(10 524)" fill="#fff"/>
+    <g id="icon-AT-2" data-name="icon-AT" transform="translate(646 -916)">
+      <g id="グループ_1780" data-name="グループ 1780" transform="translate(-625 1441)">
+        <circle id="楕円形_25" data-name="楕円形 25" cx="25" cy="25" r="25" transform="translate(0 0)" fill="#30bfa7"/>
+        <g id="グループ_68" data-name="グループ 68" transform="translate(9.167 8.75)">
+          <line id="線_1" data-name="線 1" y2="30" transform="translate(1.667 2.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="線_2" data-name="線 2" y2="15" transform="translate(31.25 17.083)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="線_3" data-name="線 3" y2="30" transform="translate(11.528 2.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="線_4" data-name="線 4" y2="30" transform="translate(21.389 2.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+          <line id="線_5" data-name="線 5" x2="30" transform="translate(1.25 17.5)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+          <circle id="楕円形_26" data-name="楕円形 26" cx="1.667" cy="1.667" r="1.667" fill="#fff"/>
+        </g>
+        <circle id="楕円形_27" data-name="楕円形 27" cx="10" cy="10" r="10" transform="translate(15 15)" fill="#fff"/>
+        <text id="A" transform="translate(21.52 29.812)" fill="#30bfa7" font-size="14" font-family="AvenirNextCondensed-Regular, Avenir Next Condensed"><tspan x="0" y="0">A</tspan></text>
+      </g>
+    </g>
+    <text id="AT" transform="translate(46 591)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-7.734" y="0">AT</tspan></text>
+  </g>
+</svg>

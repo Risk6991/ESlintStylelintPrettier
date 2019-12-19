@@ -36,7 +36,7 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 .f-fontTitle {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.4;
   color: $color-text;
   letter-spacing: 0.72px;
   opacity: 1;
@@ -219,7 +219,7 @@ $responsive-font-9-12: calc(0.5625rem + ((1vw - 3.75px) * 0.1942));
 .f-fontNickName {
   font-family: 'Hiragino Sans';
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.2;
   color: $color-text;
   text-align: left;

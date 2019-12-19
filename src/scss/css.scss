@@ -16,6 +16,7 @@
 @import '_card';
 @import '_menubar';
 @import '_hero';
+@import '_header';
 
 /* =================================================================== */
 
@@ -64,4 +65,27 @@
 /* 利用規約の文字が14pxなので1.5行文の行間を空けるため */
 .u-padding-bottom21 {
   padding-bottom: 21px;
+}
+
+.vue-map-container,
+.vue-map-container .vue-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* 選択ボタンのスタイル当て */
+.originalFileBtn {
+  position: relative;
+  display: inline-block;
+  padding: 2px 1em;
+  border: 3px solid ;
+}
+
+.originalFileBtn input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }

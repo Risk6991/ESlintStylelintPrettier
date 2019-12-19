@@ -182,6 +182,9 @@ footer {
 .main-area {
   flex: 1 0 auto; }
 
+.l-margin-auto {
+  margin: 0 auto; }
+
 .l-flex-col {
   display: flex;
   flex-direction: column; }
@@ -202,10 +205,6 @@ footer {
   display: flex;
   align-items: center; }
 
-.l-flex-justify-content-center {
-  display: flex;
-  justify-content: center; }
-
 .l-flex-justify-content-start {
   display: flex;
   justify-content: start; }
@@ -213,6 +212,10 @@ footer {
 .l-flex-justify-content-end {
   display: flex;
   justify-content: end; }
+
+.l-flex-justify-content-center {
+  display: flex;
+  justify-content: center; }
 
 .l-flex-center {
   display: flex;
@@ -251,13 +254,6 @@ footer {
 .l-flex-inline-center {
   display: inline-flex;
   justify-content: center; }
-
-.l-flex-around {
-  display: flex;
-  justify-content: space-around; }
-
-.l-margin-auto {
-  margin: 0 auto; }
 
 /**
 *   Utility
@@ -301,6 +297,18 @@ footer {
 
 .u-margin-bottom30 {
   margin-bottom: 30px; }
+
+.u-margin-top5 {
+  margin-top: 5px; }
+
+.u-margin-top10 {
+  margin-top: 10px; }
+
+.u-margin-top20 {
+  margin-top: 20px; }
+
+.u-margin-top30 {
+  margin-top: 30px; }
 
 .u-padding-top5 {
   padding-top: 5px; }
@@ -371,7 +379,7 @@ footer {
 .f-fontTitle {
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.4;
   color: #333;
   letter-spacing: 0.72px;
   opacity: 1; }
@@ -456,7 +464,7 @@ footer {
 .f-fontPrice {
   font-family: 'Abel';
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.2;
   color: #333;
   letter-spacing: 0;
@@ -465,7 +473,7 @@ footer {
 .f-fontPrice--hiLight {
   font-family: 'Abel';
   font-size: 24px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.2;
   color: #f37;
   letter-spacing: 0;
@@ -512,7 +520,7 @@ footer {
 .f-fontNewEntry {
   font-family: 'Abel';
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.2;
   color: #333;
   text-align: center;
@@ -533,7 +541,7 @@ footer {
 .f-fontNickName {
   font-family: 'Hiragino Sans';
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.2;
   color: #333;
   text-align: left;
@@ -574,6 +582,10 @@ footer {
 .p-titleArea__title {
   margin-left: 10%; }
 
+.p-deliveryPlace__place {
+  width: 112px;
+  height: 38px; }
+
 .p-delivery {
   width: 100%;
   max-width: 650px;
@@ -613,10 +625,14 @@ footer {
 
 .p-owner-carInfo {
   width: 100%;
-  height: 318px; }
+  height: auto; }
 
 .p-owner {
-  height: 75px; }
+  height: 44px; }
+
+.p-owner__image {
+  width: 44px;
+  height: 44px; }
 
 .p-car-info {
   font-family: 'Hiragino Sans';
@@ -637,9 +653,12 @@ footer {
   max-width: 650px;
   height: auto; }
 
-.p-equipment__item {
+.p-equipment__spec {
   width: calc(100% / 5);
   padding: 10px; }
+
+.p-equipment__item {
+  width: 80%; }
 
 .c-btn {
   width: 300px;
@@ -696,6 +715,19 @@ footer {
   border-radius: 3px;
   opacity: 1; }
 
+.c-card__image > img {
+  width: 100%;
+  max-width: 335px;
+  height: 228px;
+  object-fit: cover; }
+
+.c-card__carImage {
+  width: 100%;
+  height: 150px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
+
 .c-card__timeTable {
   width: 100%;
   height: 80px;
@@ -703,20 +735,18 @@ footer {
   border-radius: 3px;
   opacity: 1; }
 
-.c-card__titleArea {
-  width: 100%; }
+.c-titleArea {
+  width: 100%;
+  height: 60px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
 
 .c-card__12hoursPrice {
   height: 37px; }
 
 .c-card__24hoursPrice {
   height: 37px; }
-
-.c-titleArea {
-  width: 100%;
-  height: 60px;
-  background: #fff 0% 0% no-repeat padding-box;
-  opacity: 1; }
 
 .c-titleArea__title {
   margin-left: 5%; }
@@ -771,13 +801,35 @@ footer {
 .p-hero-image {
   width: 100%;
   height: 498px;
-  background-image: url(src/images/aracan-top2x.jpg);
+  background-image: url(../images/aracan-top2x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
 .p-hero-image__button {
   padding-top: 436px; }
+
+.c-header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+  .c-header > a:hover {
+    opacity: 0.5; }
+
+.c-header__title {
+  display: inline-flex;
+  align-items: center;
+  height: 20px; }
+
+.c-header__icon {
+  position: absolute;
+  top: 21px;
+  left: 6%;
+  display: inline-flex;
+  align-items: center;
+  width: 10px; }
 
 /* =================================================================== */
 label > input {

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-drivesystem-rr" transform="translate(-152 -1280)">
+    <rect id="長方形_1610" data-name="長方形 1610" width="71" height="74" transform="translate(152 1280)" fill="#fff"/>
+    <g id="icon" transform="translate(614.567 -841)">
+      <g id="グループ_1761" data-name="グループ 1761" transform="translate(-451.567 2121.5)">
+        <circle id="楕円形_5" data-name="楕円形 5" cx="25" cy="25" r="25" transform="translate(0 0)" fill="#30bfa7"/>
+        <rect id="長方形_1" data-name="長方形 1" width="19.167" height="40.833" rx="7.198" transform="translate(15.417 5.417)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <g id="グループ_10" data-name="グループ 10" transform="translate(16.667 10)">
+          <g id="グループ_9" data-name="グループ 9">
+            <rect id="長方形_2" data-name="長方形 2" width="3.333" height="6.667" rx="0.8" fill="#fff"/>
+          </g>
+          <rect id="長方形_3" data-name="長方形 3" width="3.333" height="6.667" rx="0.8" transform="translate(13.333)" fill="#fff"/>
+          <rect id="長方形_4" data-name="長方形 4" width="13.333" height="0.833" transform="translate(2.5 2.5)" fill="#fff"/>
+        </g>
+        <g id="グループ_12" data-name="グループ 12" transform="translate(16.667 34.167)">
+          <g id="グループ_11" data-name="グループ 11">
+            <rect id="長方形_5" data-name="長方形 5" width="3.333" height="6.667" rx="0.8" fill="#fff"/>
+          </g>
+          <rect id="長方形_6" data-name="長方形 6" width="3.333" height="6.667" rx="0.8" transform="translate(13.333)" fill="#fff"/>
+          <rect id="長方形_7" data-name="長方形 7" width="13.333" height="0.833" transform="translate(2.5 2.5)" fill="#fff"/>
+        </g>
+        <text id="RR" transform="translate(19.642 27.301)" fill="#fff" font-size="11" font-family="AvenirNextCondensed-Regular, Avenir Next Condensed" letter-spacing="-0.06em"><tspan x="0" y="0">RR</tspan></text>
+        <rect id="長方形_8" data-name="長方形 8" width="5.833" height="5.926" transform="translate(22.083 34.167)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+    <text id="RR-2" data-name="RR" transform="translate(188 1347)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-8.712" y="0">RR</tspan></text>
+  </g>
+</svg>

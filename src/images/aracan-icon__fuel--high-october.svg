@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-high-october" transform="translate(-81 -440)">
+    <rect id="長方形_1575" data-name="長方形 1575" width="71" height="74" transform="translate(81 440)" fill="#fff"/>
+    <text id="ハイオク" transform="translate(117 507)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-23.76" y="0">ハイオク</tspan></text>
+    <g id="icon" transform="translate(630.283 -916)">
+      <path id="パス_204" data-name="パス 204" d="M403.036,108.342a.653.653,0,0,0,.27-.823l-1.824-4.475a.686.686,0,0,0-.811-.39l-.1.029c-.217-.3-.439-.594-.679-.875a12.9,12.9,0,0,0-2.14-2v2.243a11.825,11.825,0,0,1,1.058,1.249.657.657,0,0,0-.13.711l1.825,4.476a.679.679,0,0,0,.691.4,14.968,14.968,0,0,1,.253,2.747,13.691,13.691,0,0,1-3.7,9.583v2.243a12.9,12.9,0,0,0,2.14-2,15.082,15.082,0,0,0,3.494-9.827A16.006,16.006,0,0,0,403.036,108.342Z" transform="translate(-913.854 1269.365)" fill="#fff"/>
+      <g id="グループ_1783" data-name="グループ 1783" transform="translate(-538.283 1356)">
+        <circle id="楕円形_32" data-name="楕円形 32" cx="25" cy="25" r="25" fill="#30bfa7"/>
+        <rect id="長方形_49" data-name="長方形 49" width="25.234" height="33.85" transform="translate(12.283 8.508)" fill="#fff"/>
+        <rect id="長方形_50" data-name="長方形 50" width="28.113" height="2.909" transform="translate(10.638 39.274)" fill="#fff"/>
+        <text id="ハイ_オク" data-name="ハイ
+オク" transform="translate(15.283 21.38)" fill="#30bfa7" font-size="9" font-family="HiraginoSans-W3, Hiragino Sans"><tspan x="0" y="0">ハイ</tspan><tspan y="0" font-family="Helvetica"></tspan><tspan x="0" y="10">オク</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

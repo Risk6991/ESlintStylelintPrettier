@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="74" viewBox="0 0 71 74">
+  <g id="icon-passengers2" transform="translate(-10 -692)">
+    <rect id="長方形_1589" data-name="長方形 1589" width="71" height="74" transform="translate(10 692)" fill="#fff"/>
+    <g id="icon" transform="translate(646 -919)">
+      <g id="グループ_1766" data-name="グループ 1766" transform="translate(-625 1611)">
+        <circle id="楕円形_10" data-name="楕円形 10" cx="25" cy="25" r="25" fill="#30bfa7"/>
+        <text id="_2" data-name="2" transform="translate(17.95 34.812)" fill="#fff" font-size="29" font-family="AvenirNextCondensed-Regular, Avenir Next Condensed"><tspan x="0" y="0">2</tspan></text>
+      </g>
+    </g>
+    <text id="定員_名" data-name="定員２名" transform="translate(46 759)" fill="#30bfa7" font-size="12" font-family="HiraKakuPro-W3, Hiragino Kaku Gothic Pro"><tspan x="-24" y="0">定員２名</tspan></text>
+  </g>
+</svg>
