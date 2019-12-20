@@ -319,6 +319,9 @@ footer {
 .u-padding-top20 {
   padding-top: 20px; }
 
+.u-padding-top30 {
+  padding-top: 30px; }
+
 .u-padding-bottom5 {
   padding-bottom: 5px; }
 
@@ -428,15 +431,31 @@ footer {
   font-family: 'Hiragino Sans';
   font-size: 14px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.07;
   color: #333;
   text-align: center;
   letter-spacing: 0.56px;
   opacity: 1; }
 
-.f-font-btn2 {
+.f-font-btn--white {
   font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
   color: #fff;
+  text-align: center;
+  letter-spacing: 0.56px;
+  opacity: 1; }
+
+.f-font-btn--green {
+  font: W6 14px/15px Hiragino Kaku Gothic Pro;
+  font-family: 'Hiragino Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #30bfa7;
+  text-align: center;
   letter-spacing: 0.56px;
   opacity: 1; }
 
@@ -505,6 +524,7 @@ footer {
   line-height: 1.2;
   color: #999;
   letter-spacing: 0;
+  white-space: nowrap;
   opacity: 1; }
 
 .f-fontIcon--white {
@@ -515,6 +535,7 @@ footer {
   line-height: 1.2;
   color: #fff;
   letter-spacing: 0;
+  white-space: nowrap;
   opacity: 1; }
 
 .f-fontNewEntry {
@@ -542,8 +563,18 @@ footer {
   font-family: 'Hiragino Sans';
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.5;
   color: #333;
+  text-align: left;
+  letter-spacing: 0;
+  opacity: 1; }
+
+.f-fontNickName--green {
+  font-family: 'Hiragino Sans';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #30bfa7;
   text-align: left;
   letter-spacing: 0;
   opacity: 1; }
@@ -660,6 +691,67 @@ footer {
 .p-equipment__item {
   width: 80%; }
 
+.p-carRequest__list {
+  background: #fff 0% 0% no-repeat padding-box;
+  opacity: 1; }
+
+.p-carRequest__list input {
+  margin-bottom: 0 !important; }
+
+.p-requestList__area {
+  background: #fff 0% 0% no-repeat padding-box !important; }
+
+/* dataPickerの調整スタイル */
+.p-picker__color {
+  background: #fff 0% 0% no-repeat padding-box !important; }
+
+.pickers-container {
+  height: 92% !important; }
+
+.datepicker-indent {
+  text-indent: 5em !important; }
+
+.select-wrapper input.select-dropdown {
+  text-indent: 3em;
+  background-color: #fff !important; }
+
+.select-wrapper .caret {
+  z-index: 1 !important; }
+
+/* dataPickerの調整スタイル END */
+.p-schedule__header {
+  width: 335px;
+  height: 50px; }
+
+.p-driver-btn {
+  width: 165px;
+  height: 50px;
+  background: #30bfa7 0% 0% no-repeat padding-box;
+  border-radius: 3px 3px 0 0;
+  opacity: 1; }
+
+.p-schedule__card {
+  width: 335px;
+  height: 260px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+  opacity: 1; }
+
+.p-schedule__list {
+  width: 310px;
+  height: 24px; }
+
+.p-schedule__list--place {
+  width: 295px;
+  height: 42px; }
+
+.p-schedule__item {
+  width: 130px;
+  height: 13px; }
+
+.p-schedule__address {
+  width: 130px; }
+
 .c-btn {
   width: 300px;
   height: 40px;
@@ -707,6 +799,20 @@ footer {
 
 .-white {
   background: #fff 0% 0% no-repeat padding-box; }
+
+.p-tab-btn--driver {
+  width: 165px;
+  height: 50px;
+  background: #30bfa7 0% 0% no-repeat padding-box;
+  border-radius: 3px 3px 0 0;
+  opacity: 1; }
+
+.p-tab-btn--owner {
+  width: 165px;
+  height: 50px;
+  background: #fff 0% 0% no-repeat padding-box;
+  border-radius: 5px 5px 0 0;
+  opacity: 1; }
 
 .c-card {
   width: 335px;
@@ -815,7 +921,7 @@ footer {
   height: 60px;
   background: #fff 0% 0% no-repeat padding-box;
   opacity: 1; }
-  .c-header > a:hover {
+  .c-header > a:active {
     opacity: 0.5; }
 
 .c-header__title {
