@@ -1,0 +1,21 @@
+@mixin status-icon {
+  width: 70px;
+  height: 20px;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.status-icon--request {
+  @include status-icon;
+
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: #02c8ff 0% 0% no-repeat padding-box;
+}
+
+.status-icon--cancel {
+  @include status-icon;
+
+  background: #b4b4b4 0% 0% no-repeat padding-box;
+}
