@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="all-wrap grey l-margin-auto" ontouchstart="">
+        <header>
+            <div class="c-header l-flex-row l-flex-center">
+                <a href="">
+                    <i class="c-header__icon">
+                        <img src="src/images/aracan-icon__arrow.svg" alt="">
+                    </i>
+                </a>
+                <span class="c-header__title f-fontTitle">予定一覧</span>
+            </div>
+        </header>
+        <main class="main-area l-margin-auto" role="main">
+
+
+
+            <article>
+                <div class="c-carImage -shadow l-flex-col l-flex-align-items-center">
+                    <div class="carousel carousel-slider">
+                        @foreach(var image in Model.CarImagePaths)
+                        {
+                        <a class="carousel-item">
+                            <div class="c-carImage__image l-margin-auto">
+                                <image src="@image" />
+                            </div>
+                        </a>
+                        }
+                    </div>
+                    <div class="c-carDetail">
+                        <div class="c-carDetail__titl
+                        e u-padding-top20">
+                            <h5 class="f-fontSubTitle">LAMBORGHINI</h5>
+                            <h5 class="f-fontTitle">AVENTADOLE S / 2019</h5>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="container" id="js-booking-detail-confirms-for-owner">
+                <div class="row" id="js-booking-detail-reload" js-reload-interval-milliseconds="10000">
+                    <h1 class="display-4">オーナー側予定詳細</h1>
+                    <div class="col-md-4">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group">
+
+                            <input type="text" value="申請中" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CarImagePath"></label>
+                            <image src="@Model.CarImagePath" width="128" height="128" />
+                            <label asp-for="CarName"></label>
+                            <input asp-for="CarName" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DeliveryLocation"></label>
+                            <input asp-for="DeliveryLocation" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StartDateTime"></label>
+                            <input asp-for="StartDateTime" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EndDateTime"></label>
+                            <input asp-for="EndDateTime" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Amount"></label>
+                            <span class="form-control"><span class="f-fontYen">¥</span>@Html.DisplayFor(m => m.Amount)</span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="OwnerId"></label>
+                            <image src="@Model.OwnerSelfiePath" width="128" height="128" />
+                            <input asp-for="OwnerNickName" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DriverId"></label>
+                            <image src="@Model.DriverSelfiePath" width="128" height="128" />
+                            <input asp-for="DriverNickName" class="form-control" readonly />
+                            <a asp-controller="Chats" asp-action="Details" asp-route-id="@Model.DriverId">チャット</a>
+                        </div>
+
+                        @switch (Model.BookingStatus)
+                        {
+                        // 申請中
+                        case sharing.Enums.BookingStatus.Requested:
+                        <form id="js-booking-detail-confirm-form-accept" name="js-booking-detail-confirm-form-accept" asp-controller="OwnerBookings" asp-action="Accept" asp-route-id="@Model.BookingId" method="post">
+                            <button type="button" class="btn btn-primary" v-on:click="submitAccept">承認する</button>
+                        </form>
+                        <form id="js-booking-detail-confirm-form-reject" name="js-booking-detail-confirm-form-reject" asp-controller="OwnerBookings" asp-action="Reject" asp-route-id="@Model.BookingId" asp-route-status="@Model.BookingStatus" method="post">
+                            <button type="button" class="btn btn-primary" v-on:click="submitReject">ことわる</button>
+                        </form>
+                        <form asp-controller="OwnerBookings" asp-action="Index" method="get">
+                            <button type="submit" class="btn btn-primary">一覧に戻る</button>
+                        </form>
+                        break;
+                        // 拒否済み
+                        case sharing.Enums.BookingStatus.Rejected:
+                        // キャンセル済み
+                        case sharing.Enums.BookingStatus.Canceled:
+                        <form asp-controller="OwnerBookings" asp-action="Index" method="get">
+                            <button type="submit" class="btn btn-primary">戻る</button>
+                        </form>
+                        break;
+                        // 受渡待ち
+                        case sharing.Enums.BookingStatus.Allowed:
+                        <form id="js-booking-detail-confirm-form-delivery-start" name="js-booking-detail-confirm-form-delivery-start" asp-controller="OwnerBookings" asp-action="DeliveryStart" asp-route-id="@Model.BookingId" method="get">
+                            <button type="button" class="btn btn-primary" v-on:click="submitDeliveryStart">受渡を開始する</button>
+                        </form>
+                        <form id="js-booking-detail-confirm-form-cancel" name="js-booking-detail-confirm-form-cancel" asp-controller="OwnerBookings" asp-action="Cancel" asp-route-id="@Model.BookingId" asp-route-status="@Model.BookingStatus" method="post">
+                            <button type="button" class="btn btn-primary" v-on:click="submitCancel">キャンセル</button>
+                        </form>
+                        <form asp-controller="OwnerBookings" asp-action="Index" method="get">
+                            <button type="submit" class="btn btn-primary">一覧に戻る</button>
+                        </form>
+                        break;
+                        // 貸出中
+                        case sharing.Enums.BookingStatus.SharingStarted:
+                        <form id="js-booking-detail-confirm-form-return-start" name="js-booking-detail-confirm-form-return-start" asp-controller="OwnerBookings" asp-action="CheckCarCondition" asp-route-id="@Model.BookingId" method="get">
+                            <button type="button" class="btn btn-primary" v-on:click="submitReturnStart">返却を開始する</button>
+                        </form>
+                        <form asp-controller="OwnerBookings" asp-action="Index" method="get">
+                            <button type="submit" class="btn btn-primary">一覧に戻る</button>
+                        </form>
+                        break;
+                        // 返却中
+                        case sharing.Enums.BookingStatus.ReturnMet:
+                        case sharing.Enums.BookingStatus.OwnersBodyConfirmed:
+                        // 返却中（キズ責任選択済み）
+                        case sharing.Enums.BookingStatus.ResponsibilitySelected:
+                        // 返却済み
+                        case sharing.Enums.BookingStatus.SharingEnded:
+                        // 要修理
+                        case sharing.Enums.BookingStatus.NeedRepairSharingEnded:
+                        // 修理中
+                        case sharing.Enums.BookingStatus.EnteredShop:
+                        // 修理済み
+                        case sharing.Enums.BookingStatus.Repaired:
+                        <form asp-controller="OwnerBookings" asp-action="Index" method="get">
+                            <button type="submit" class="btn btn-primary">一覧に戻る</button>
+                        </form>
+                        break;
+
+                        // 以下は本来このViewに来ない不正な遷移
+                        // 受渡中
+                        case sharing.Enums.BookingStatus.DeliverMet:
+                        case sharing.Enums.BookingStatus.LicenceConfirmed:
+                        case sharing.Enums.BookingStatus.DriversBodyConfirmed:
+                        // オーナーキズ修理要否選択済み
+                        case sharing.Enums.BookingStatus.RepairConfirmed:
+                        // TODO v0.2未対応
+                        case sharing.Enums.BookingStatus.CancelRequestedFromDriver:
+                        case sharing.Enums.BookingStatus.CancelRequestedFromOwner:
+                        case sharing.Enums.BookingStatus.ConflictOfCancellation:
+                        case sharing.Enums.BookingStatus.DriverReviewed:
+                        case sharing.Enums.BookingStatus.OwnerReviewed:
+                        <span>coution</span>
+                        break;
+                        default:
+                        break;
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+        <div class="c-floatingNav">
+            <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+                <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
+                    <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat--white.svg" alt="吹き出しアイコン"></i>
+                    <span class="f-fontIcon--white">予約する</span>
+                </button>
+            </form>
+        </div>
+        <div class="c-floatingNav">
+            <form class="form-inline js-need-position" asp-controller="CarSearch" asp-action="Index" method="post">
+                <button class="c-floatingNav__Btn -shadow l-flex-col l-flex-center" type="submit">
+                    <i class="c-iconArea__icon"><img src="src/images/aracan-icon__search--white.svg" alt="虫眼鏡アイコン"></i>
+                    <span class="f-fontIcon--white">車を探す</span>
+                </button>
+            </form>
+        </div>
+        <nav class="c-menubar f-text-align-center">
+            <ul class="c-menubar__list">
+                <li class="c-menubar__list l-flex-center l-flex-around">
+                    <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Home" asp-action="Index">
+                        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__home.svg" alt=""></i>
+                        <span class="f-fontIcon">トップ</span>
+                    </a>
+                </li>
+                <li class="c-menubar__list l-flex-center l-flex-around">
+                    <a class="c-iconArea l-flex-col l-flex-center" asp-controller="Chats" asp-action="Index">
+                        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__chat.svg" alt=""></i>
+                        <span class="f-fontIcon">チャット</span>
+                    </a>
+                </li>
+                <li class="c-menubar__list l-flex-center l-flex-around">
+                    <a class="c-iconArea l-flex-col l-flex-center" asp-controller="MyPages" asp-action="Index">
+                        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__user.svg" alt=""></i>
+                        <span class="f-fontIcon">マイページ</span>
+                    </a>
+                </li>
+                <li class="c-menubar__list l-flex-center l-flex-around">
+                    <a class="c-iconArea l-flex-col l-flex-center" asp-controller="OwnerBookings" asp-action="Index">
+                        <i class="c-iconArea__icon"><img src="src/images/aracan-icon__calendar.svg" alt=""></i>
+                        <span class="f-fontIcon">予定
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <footer class="page-footer grey lighten-2">
+            <div class="footer-copyright grey">
+                <div class="container center">
+                    © Aracan
+                </div>
+            </div>
+        </footer>
+        <script src="src/lib/jquery/dist/jquery.min.js"></script>
+        <script src="src/dist/main.js" asp-append-version="true"></script>
+    </div>
+</body>
+</html>

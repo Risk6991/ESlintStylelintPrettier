@@ -9,7 +9,7 @@
     "eslint:fix": "eslint -c .eslintrc.js --color './src/**/*.{js,jsx}' --fix",
     "stylelint": "stylelint --config .stylelintrc.js './src/**/*.scss'",
     "stylelint:fix": "stylelint --config .stylelintrc.js './src/**/*.scss' --fix",
-    "css":"node-sass src/scss/style.scss style.css"
+    "css": "node-sass src/scss/style.scss style.css"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "luminous-lightbox": "^2.3.2",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "prettier-stylelint": "^0.4.2",

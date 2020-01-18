@@ -23,13 +23,17 @@
     </header>
     <main class="main-area l-margin-auto" role="main">
 
-      <div class="p-schedule__header l-flex-row l-flex-space-between u-margin-top20">
-        <div class="p-tab-btn--driver -shadow l-flex-center">
-          <span class="f-font-btn--white">ドライバー</span>
-        </div>
-        <div class="p-tab-btn--owner -shadow l-flex-center">
-          <span class="f-font-btn--green">オーナー</span>
-        </div>
+      <div class="p-schedule__header l-flex-row l-flex-space-between u-margin-top20 l-margin-auto">
+        <a asp-controller="DriverBookings" asp-action="Index">
+          <div class="p-tab-btn--green -shadow l-flex-center waves-effect">
+            <span class="f-font-btn--white">ドライバー</span>
+          </div>
+        </a>
+        <a asp-controller="OwnerBookings" asp-action="Index">
+          <div class="p-tab-btn--white -shadow l-flex-center waves-effect">
+            <span class="f-font-btn--green">オーナー</span>
+          </div>
+        </a>
       </div>
 
 
